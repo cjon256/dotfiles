@@ -1,0 +1,38 @@
+# this is just my personal stuff, see `cheat zsh.orig` for original
+
+# General Notes
+# I am using jefferytse's zsh-vi-mode and powerlevel10k for the prompt
+# I do not like shared history between shells, so doing INC_APPEND_HISTORY
+
+GIT
+g   -- git, but `git status --ignore-untracked' with no arguments
+gcv -- git commit -v
+gap -- git add --patch (less needed with nvim gitsigns)
+gdf -- git diff
+
+NVIM
+v and v. aliases
+
+MISC
+ipy -- alias for ipython... hmmm
+c   -- alias for code (VS Code)
+l     -- ls -CF --color
+la    -- -a too
+ll    -- exa -l with icons
+llt   -- exa -l with icons in a tree
+
+KUBECTL
+k    -- kubectl
+kall -- kubectl get all -o wide --show-labels
+yk   -- '-o yaml' 
+dk   -- '-o yaml --dry-run=client' 
+rmk  -- kubectl delete --grace-period=0 --force=true
+kaf  -- kubectl apply -f
+
+TERRAFORM
+tfaws -- terraform with aws creds
+tfcf  -- terraform with cloudflare and aws creds
+
+ipinfo, whatsmyip and mkgd are funtions that might be useful at times
+
+help -- can help with options for zsh builtins

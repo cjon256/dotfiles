@@ -1,0 +1,10 @@
+
+ok, nvim config is just too damn complex
+
+everything seems to require plenary, so that is first
+
+there are a few themes... ok, actually it cleaned up nicely with lazy.nvim
+
+nm then...
+
+maybe move custom keymaps here and use nvim for built-in functionality?

@@ -1,0 +1,51 @@
+---
+syntax: bash
+tags: [ mac, deps ]
+---
+# Find packages
+brew search <string>
+
+# Get more details of a package
+brew info <package-name>
+brew info --json=v1 <package-name> | jq .
+
+# Update brew itself
+brew update
+
+# Upgrade all formulae and casks
+brew upgrade
+
+# Upgrade specific formula or cask
+brew upgrade <formula>
+
+# Install formula
+brew install <formula>
+
+# Install cask
+brew install --cask <formula>
+
+# Uninstall
+brew uninstall <formula>
+
+# Remove stale dependecies
+brew autoremove
+
+# List installed formulae
+brew list
+
+# Fix
+brew doctor
+
+# Clean up (what exactly?)
+brew cleanup
+
+# Show all installed 
+brew bundle dump --file=-
+
+# Show the installed that are actually relevant
+brew leaves -r
+
+# Show all dependency relationships
+brew deps --tree --topological --installed | less
+
+

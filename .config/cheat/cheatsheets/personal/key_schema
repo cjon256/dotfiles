@@ -1,0 +1,27 @@
+There are 16 possible modifier combos
+
+c o c s
+m p t h
+d t r i
+    t f
+      t
+
+- - - -      = normal text          used by all apps
+- - - s      = shifted text         used by all apps
+- - c -      = ctrl keys            used by all apps
+- - c s      = captital ctrl        used by all apps
+
+- o - -      =                      unused ???
+- o - s      =                      unused ???
+- o c -      =                      unused ???
+- o c s      =                      unused ??? -- propose right hand for app launch, left for aerospace stuff?
+
+c - - -      = just cmd key         used by system and gui apps
+c - - s      =                      used by system and gui apps
+c - c -      =                      unused ???
+c - c s      =                      unused ???
+
+c o - -      =                      unused ???
+c o - s      =                      unused ???
+c o c -      =                      unused ???
+c o c s      = super key            unused ???

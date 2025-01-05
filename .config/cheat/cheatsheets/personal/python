@@ -1,0 +1,6 @@
+Use pyenv for most python tasks, but use `conda activate base` for Data
+science and ML stuff...
+
+miniconda3-3.11-23.10.0-1 also python 3.12.0
+
+

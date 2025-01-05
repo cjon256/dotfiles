@@ -1,0 +1,105 @@
+# My custom neovim shortcuts
+
+see cheat surround for surround.nvim
+
+Note: In normal mode I disable Q and q:
+
+## Telescope
+<leader>ff  Telescope find_files
+<leader>fs  Telescope live_grep
+<leader>fc  Telescope grep_string
+<leader>fb  Telescope buffers
+<leader>fh  Telescope help_tags
+
+## Harpoon <leader><leader> prefix
+## notice that it is all right hand, home row then top
+<leader><leader>m   Harpoon menu
+<leader><leader>a   Harpoon add file (also w)
+<leader><leader>d   Harpoon switch to file 1
+<leader><leader>h   Harpoon switch to file 2
+<leader><leader>t   Harpoon switch to file 3
+<leader><leader>n   Harpoon switch to file 4
+<leader><leader>s   Harpoon switch to file 5
+<leader><leader>f   Harpoon switch to file 6
+<leader><leader>g   Harpoon switch to file 7
+<leader><leader>c   Harpoon switch to file 8
+<leader><leader>r   Harpoon switch to file 9
+<leader><leader>l   Harpoon switch to file 10
+
+## Closing and Saving Files
+<leader>ww  Write file
+<leader>wa  Write all files
+<leader>qq  Close file
+<leader>qa  Close all files (also <leader>aq since I typo it)
+
+# Misc Conveniences
+<leader>tt  Open NetRW filesystem browser
+<leader>bb  Show buffers and choose by number -> could use a fzf impl
+<leader>f6  Toggle to most recent buffer
+<leader>tr  Trouble toggle
+<leader>ut  UndoTree toggle
+<leader>so  Symbols outliner
+
+## GitSigns
+]c           Go to next hunk (and [c is prev)
+<leader>hs   Stage hunk
+<leader>hS   Stage buffer
+<leader>hu   Undo stage hunk
+<leader>hp   Preview hunk
+<leader>hr   Reset hunk (revert to what is in index)
+<leader>hR   Reset buffer
+<leader>hb   Show blame popup for current line
+<leader>tb   Toggle showing blame on current line
+<leader>hd   Diff buffer
+<leader>hD   Diff buffer but with ~ ?!?
+<leader>td   Show deleted lines
+'ih'         Select hunk in select mode
+
+<leader>gc   Runs `git commit --verbose`
+
+## LSP Stuff (too much here)
+<leader>vgd  definition
+<leader>vgD  declaration
+<leader>vk   hover
+<leader>vws  workspace_symbol
+<leader>vd   vim.diagnostic.open_float
+[d           vim.diagnostic.goto_next
+]d           vim.diagnostic.goto_prev
+<leader>vca  code_action
+<leader>vco  safer code_action? something from Primeagen
+<leader>vrr  references
+<leader>vrn  rename
+<leader>vsh  signature_help
+<leader>vcd  show_cursor_diagnostics
+<leader>vcl  show_line_diagnostics
+<leader>vff  lsp_finder
+<leader>vgi  implementation
+<leader>bf   Format buffer using LSP
+
+## ToggleTerm
+<C-t><C-t>   ToggleTerm
+<C-t><C-n>   In ToggleTerm increase window size
+<C-t><C-h>   In ToggleTerm decrease window size
+Use <leader><Esc> to escape
+
+## Moving around with n, N, J, <C-d>, and <C-u> are centered, as are
+<C-k>        cnext but centered
+<C-j>        cprev but centered
+<leader>k    lnext but centered
+<leader>j    lprev but centered
+
+## Clipboard integration (ThePrimeagen greatest hits)
+<leader>y    copy to clipboard (motion or selection)
+<leader>p    paste from clipboard
+<leader>Y    same but for lines
+Y            copy to end of line
+<leader>d    delete to blackhole register
+
+<C-f>        opens a new tmux-sessionizer
+
+## Toggles
+<leader>tc   toggle cursorline
+<leader>th   toggle hlsearch
+<leader>tp   toggle paste
+
+<leader>mp   Format with conform ?!?

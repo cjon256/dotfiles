@@ -1,0 +1,65 @@
+# map j scrollDown
+# map <c-e> scrollDown
+# map k scrollUp
+# map <c-y> scrollUp
+map gg ScrollToTop
+map G scrollToBottom
+map d scrollPageDown
+map u scrollPageUp
+map yy copyCurrentUrl
+map p openCopiedUrlInCurrentTab
+map P openCopiedUrlInNewTab
+map gu goUp
+map gU goToRoot
+map i enterInsertMode
+map v enterVisualMode)
+map V enterVisualLineMode)
+map <C-v> passNextKey
+map gi focusInput
+map f LinkHints.activateMode
+map F LinkHints.activateModeToOpenInNewTab
+map gf LinkHints.activateModeWithQueue
+map yf LinkHints.activateModeToCopyLinkUrl
+map [[ goPrevious
+map ]] goNext
+# map gf nextFrame
+# map gF mainFrame
+map gF nextFrame
+map m Marks.activateCreateMode
+map ` Marks.activateGotoMode
+map o Vomnibar.activate
+map O Vomnibar.activateInNewTab
+map b Vomnibar.activateBookmarks
+map B Vomnibar.activateBookmarksInNewTab
+map T Vomnibar.activateTabSelection
+map ge Vomnibar.activateEditUrl
+map gE Vomnibar.activateEditUrlInNewTab
+map / enterFindMode
+map n performFind
+map N performBackwardsFind
+map H goBack
+map h goBack
+map L goForward
+map l goForward
+map t createTab
+map J previousTab
+map gT previousTab
+map K nextTab
+map gt nextTab
+map ^ visitPreviousTab
+map g0 firstTab
+map g$ lastTab
+map yt duplicateTab
+map <C-p> togglePinTab
+map <C-m> toggleMuteTab
+map x removeTab
+map X restoreTab
+map W moveTabToNewWindow
+map << moveTabLeft
+map >> moveTabRight
+map ? showHelp
+map gs toggleViewSource
+
+# Characters used for link hints
+# Hint characters on the home row are easier to type (dvorak layout)
+aoeuidhtns

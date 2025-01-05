@@ -1,0 +1,98 @@
+######## My Custom stuff
+<leader>tt --- opens NetDir
+<leader>ww  --- write file
+<leader>wn  --- write file and next file
+<leader>wp  --- write file and previous file
+<leader>wa  --- write all files
+<leader>qq  --- quit
+<leader>aq  --- quit all
+<leader>qa  --- quit all
+<leader>bb  --- show all open buffers and select one
+<leader>f6  --- switch to alternate buffer
+Q           --- <nop>
+q:          --- <nop>
+<C-f>       --- <cmd>silent !tmux neww tmux-sessionizer<CR>
+<leader>bf  --- im.lsp.buf.format)
+<C-k>       --- <cmd>cnext<CR>zz
+<C-j>       --- <cmd>cprev<CR>zz
+<leader>k   --- <cmd>lnext<CR>zz
+<leader>j   --- <cmd>lprev<CR>zz
+<leader>s   --- [:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+<leader>x   --- <cmd>!chmod +x %<CR>', { silent = true })
+<leader>tc  --- <CMD>set cursorline!<CR>
+<leader>th  --- <CMD>set hlsearch!<CR>
+<leader>tp  --- <CMD>set paste!<CR>
+######## Telescope
+<leader>ff  --- Telescope find_files hidden=true
+<leader>FF  --- Telescope find_files
+<leader>fg  --- Telescope git_files
+<leader>fs  --- Telescope live_grep
+<leader>fc  --- Telescope grep_string
+<leader>fb  --- Telescope buffers
+<leader>fh  --- Telescope help_tags
+######## Harpoon
+<leader>hm  --- Harpoon toggle_quick_menu
+<leader>ha  --- Harpoon add_file
+<leader>g   --- Harpoon nav_file 1
+<leader>c   --- Harpoon nav_file 2
+<leader>r   --- Harpoon nav_file 3
+<leader>l   --- Harpoon nav_file 4
+######## Trouble, UndoTree SymbolsOutline
+<leader>tr  --- TroubleToggle
+<leader>ut  --- UndotreeToggle
+<leader>so  --- SymbolsOutline
+<C-t><C-t>  --- ToggleTerm toggle
+<C-t><C-n>  --- increases size of ToggleTerm
+<C-t><C-h>  --- decreases size of ToggleTerm
+<leader>Esc --- normal mode in a ToggleTerm
+######## Gitsigns
+]c          --- next_hunk
+[c          --- prev_hunk
+<leader>hs  --- :Gitsigns stage_hunk<CR>')
+<leader>hr  --- :Gitsigns reset_hunk<CR>')
+<leader>hS  --- gs.stage_buffer)
+<leader>hu  --- gs.undo_stage_hunk)
+<leader>hR  --- gs.reset_buffer)
+<leader>hp  --- gs.preview_hunk)
+<leader>hb  --- function() gs.blame_line{full=true} end)
+<leader>tb  --- gs.toggle_current_line_blame)
+<leader>hd  --- gs.diffthis)
+<leader>hD  --- function() gs.diffthis('~') end)
+<leader>td  --- gs.toggle_deleted)
+ih          --- only in 'o' mode?!? <C-U>Gitsigns select_hunk
+######## ThePrimeagen greatest hits (also recenters after n, N, C-d and C-u)
+Y', 'yg$')  --- what the heck does this do?
+J', 'mzJ`z') --- and this?!?!
+-- greatest remap ever
+<leader>p   ---"_dP')
+-- next greatest remap ever : asbjornHaland
+<leader>y   --- yanks to system buffer (also works in visual mode)
+<leader>Y   --- does the same but capital version
+<leader>d   --- deletes to null buffer (also works in visual mode)
+######## LSP stuff
+<leader>ca  --- <CMD>Lspsaga code_action<CR>', opts) -- see available code actions
+<leader>D   --- <CMD>Lspsaga show_cursor_diagnostics<CR>', opts) -- show diagnostics for cursor
+<leader>d   --- <CMD>Lspsaga show_line_diagnostics<CR>', opts) -- show  diagnostics for line
+<leader>o   --- <CMD>LSoutlineToggle<CR>', opts) -- see outline on right hand side
+<leader>rn  --- <CMD>Lspsaga rename<CR>', opts) -- smart rename
+gD          --- <CMD>lua vim.lsp.buf.declaration()<CR>', opts) -- got to declaration
+gf          --- <CMD>Lspsaga lsp_finder<CR>', opts) -- show definition, references
+gi          --- <CMD>lua vim.lsp.buf.implementation()<CR>', opts) -- go to implementation
+gd          --- im.lsp.buf.definition, opts)
+K           --- im.lsp.buf.hover, opts)
+<leader>vws --- im.lsp.buf.workspace_symbol, opts)
+<leader>vd  --- im.diagnostic.open_float, opts)
+[d          --- im.diagnostic.goto_next, opts)
+]d          --- im.diagnostic.goto_prev, opts)
+<leader>vca --- im.lsp.buf.code_action, opts)
+<leader>vrr --- im.lsp.buf.references, opts)
+<leader>vrn --- im.lsp.buf.rename, opts)
+<C-h>       --- im.lsp.buf.signature_help, opts)
+
+    if client.name == 'tsserver' then
+        vim_keymap.set('n', '<leader>rf           --- :TypescriptRenameFile<CR>') -- rename file and update imports
+        vim_keymap.set('n', '<leader>oi           --- :TypescriptOrganizeImports<CR>') -- organize imports (not in youtube nvim video)
+        vim_keymap.set('n', '<leader>ru           --- :TypescriptRemoveUnused<CR>') -- remove unused variables (not in youtube nvim video)
+    end
+
+
