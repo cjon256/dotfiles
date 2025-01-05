@@ -72,6 +72,7 @@
             "bruno-cli"
             "exercism"
             "yadm"
+            "git-secrets"
           ];
           casks = [
             "1password"
