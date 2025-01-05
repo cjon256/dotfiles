@@ -1,0 +1,103 @@
+[core]
+    editor = nvim
+    excludesfile = /Users/cjon/.gitignore_global
+    pager = diff-so-fancy | less --tabs=4 -RFX
+    safecrlf = true
+    autocrlf = input
+[user]
+    name = "Cullen J. ONeill"
+    email = "3659487+cjon256@users.noreply.github.com"
+
+[alias]
+    br = branch
+    ci = commit
+    co = checkout
+    st = status
+    ut = ls-files --others --exclude-standard
+    sta = status --untracked-files=normal
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    cs = commit -s
+    ; wip = "git add -A; git ls-files --deleted -z | xargs -0 git rm; git commit -m \"wip\""
+    ; unwip = git log -n 1 | grep -q -c wip && git reset HEAD~1
+    stage = update-index
+    a = add
+    ap = add -i --patch
+    df = diff
+    dt = difftool
+    dtc = difftool --tool=code
+    dc = diff --cached
+    mt = mergetool
+    mtc = mergetool --tool=code
+    lgp = log -p
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    lf = ls-files
+    aa = add --all
+    diff-fetch = diff ..FETCH_HEAD
+    revert-file = checkout HEAD --
+    revert-file-server = checkout FETCH_HEAD --
+    lgg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --name-only
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    ld = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
+    ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+    # Show files ignored by git:
+    ign = ls-files -o -i --exclude-standard
+    shm = push origin master
+    llm = pull origin master
+    p = pull --rebase --ff-only
+    onelinegraph = log --oneline --graph --decorate
+    gcprunenow = gc --prune=now
+    expireunreachablenow = reflog expire --expire-unreachable=now --all
+    gca = commit -a --reuse-message=HEAD --amend
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    ui = true
+
+[push]
+    default = simple
+
+[rerere]
+    enabled = true
+
+[credential]
+    helper = cache --timeout=604800
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = true
+[fetch]
+    prune = true
+[diff]
+    colorMoved = zebra
+    tool = nvim
+[difftool "nvim"]
+    cmd = "nvim -d $LOCAL $REMOTE"
+[difftool "code"]
+    cmd = "/usr/local/bin/code --wait --diff $LOCAL $REMOTE"
+[difftool]
+    prompt = false
+[merge]
+    tool = nvim
+[mergetool]
+    prompt = false
+[mergetool "nvim"]
+    cmd = "nvim $MERGED"
+[gui]
+    editor = nvim
+[interactive]
+    diffFilter = diff-so-fancy --patch
+[diff-so-fancy]
+	changeHunkIndicators = false
