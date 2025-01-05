@@ -1,0 +1,20 @@
+task :default do
+  system("rake -sT")  # s for silent
+end
+
+desc "Copies all layouts from Adv360 to computer"
+task :backup_from_adv do
+  sh "/bin/cp /Volumes/ADV360/layouts/* layouts" if Dir.exist?("/Volumes/ADV360/") 
+end
+
+desc "Copies all backups to Adv360"
+task :install_all_to_adv do
+  sh "/bin/cp layouts/layout*.txt /Volumes/ADV360/layouts/" if Dir.exist?("/Volumes/ADV360/") 
+end
+
+desc "Copy one layout to Adv360"
+task :install_layout do
+  ARGV.each { |a| task a.to_sym do ; end }
+  sh "/bin/cp layouts/layout#{ARGV[1]}.txt /Volumes/ADV360/layouts/" if Dir.exist?("/Volumes/ADV360/") 
+end
+
