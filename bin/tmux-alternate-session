@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+ALTERNATIVE_FILE=~/.config/tmux/alternate_session
+
+if [[ -f $ALTERNATIVE_FILE ]]; then
+    alternate_session=$(cat $ALTERNATIVE_FILE)
+    tmux display-message -p '#S' > $ALTERNATIVE_FILE
+else
+    echo "no alternative session set"
+    tmux display-message -p '#S' > $ALTERNATIVE_FILE
+    exit 0
+fi
+
+if ! tmux has-session -t="$alternate_session" 2> /dev/null; then
+    echo "no such session: $alternate_session"
+else
+    tmux switch-client -t "$alternate_session"
+fi
+

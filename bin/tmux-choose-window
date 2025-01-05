@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+ALT_ALT_FILE=~/.config/tmux/alt_alt_session
+ALTERNATIVE_FILE=~/.config/tmux/alternate_session
+tmux display-message -p '#S' > $ALT_ALT_FILE
+
+tmux choose-tree -Zw
+
+/bin/mv $ALT_ALT_FILE $ALTERNATIVE_FILE
