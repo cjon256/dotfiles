@@ -1,11 +1,10 @@
+**/.DS_Store
 .CFUserTextEncoding
-.DS_Store
 .Trash/
 .bash_history
 .bash_sessions/
 .cache/
 .cargo/
-.config/.DS_Store
 .config/1Password/ssh/agent.toml
 .config/SmartSetMasterErgo (Mac)/reg.xml
 .config/aws/config
