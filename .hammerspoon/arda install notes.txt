@@ -1,0 +1,49 @@
+
+Set hostname
+————————————
+sudo scutil --set ComputerName Arda
+sudo scutil --set HostName Arda
+hostname arda
+
+Install Nix
+——————————-
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+darwin-option nixpkgs.hostPlatform = "aarch64-darwin"
+
+Did I actually use this as a basis?
+——————————————————————————————————-
+nix flake init -t nix-darwin
+sed -i '' "s/simple/$(scutil --get LocalHostName)/" flake.nix
+
+
+   86  darwin-option --flake ~/.config/nix-darwin nixpkgs.hostPlatform
+   87  darwin-option --flake ~/.config/nix-darwin nix
+   88  darwin-option --flake ~/.config/nix-darwin
+   89  darwin-option -I .config/nix-darwin
+   90  darwin-option -I .config/nix-darwin nixpkgs.hostPlatform
+   91  darwin-option -I .config/nix-darwin nixpkgs
+   93  darwin-option -I .config/nix-darwin/darwin.nix nixpkgs
+   94  darwin-option -I .config/nix-darwin/darwin.nix environment
+
+
+   95  darwin-option -I .config/nix-darwin/darwin.nix environment.systemPackages
+
+nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
+  117  nix-channel --list
+  118  nix-channel --update nixpkgs
+
+# This could be useful
+
+darwin-rebuild check --flake ~/.config/nix-darwin
+  252  darwin-rebuild changelog -v --flake ~/.config/nix-darwin/
+
+Turned on a bunch of items for sharing in Settings...
+
+Rustup
+  201  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  202  rustup
+  203  rustup update
+
+
+  57  cargo install du-dust
+
