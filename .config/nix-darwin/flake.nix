@@ -74,6 +74,7 @@
             "yadm"
             "git-secrets"
           ];
+
           casks = [
             "1password"
             "1password-cli"
@@ -96,6 +97,7 @@
             "bruno"
             "bbedit"
             "ghostty"
+            "steam"
           ];
 
           masApps = {
