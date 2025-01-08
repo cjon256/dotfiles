@@ -205,6 +205,7 @@ esc = 'mode main'
 kitty = 'secondary'
 ghostty = 'main'
 firefox = 'main'
+steam = 'main'
 reminders_things = 'secondary'
 drafts = 'secondary'
 finder = 'main'
@@ -317,3 +318,7 @@ run = "move-node-to-workspace calendar"
 [[on-window-detected]]
 if.app-id = 'com.apple.TextEdit'
 run = "move-node-to-workspace textedit"
+
+[[on-window-detected]]
+if.app-id = 'com.valvesoftware.steam'
+run = 'move-node-to-workspace steam'
