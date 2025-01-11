@@ -3,11 +3,14 @@ command = /bin/zsh
 click-repeat-interval = 500
 auto-update-channel = stable
 
-# theme = "iTerm2 Dark Background"
-# theme = "Firefly Traditional"
-theme = Argonaut
-theme = Apple Classic
-# theme = GitHub Dark -- I like it, but comments are invisible in the shell
+# These are all good, but lets go with MaterialOcean
+# theme = PaulMillr
+# theme = NightLion v1
+# theme = IR_Black
+# theme = Hurtado
+# theme = Jellybeans
+
+theme = MaterialOcean
 
 font-family = Inconsolata LGC Nerd Font Mono
 font-size = 15.5
