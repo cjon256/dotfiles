@@ -130,7 +130,7 @@
               "com.apple.keyboard.fnState" = true;
 
               # this will not immediately take effect
-              _HIHideMenuBar = true;
+              _HIHideMenuBar = false;
             };
             hitoolbox.AppleFnUsageType = "Do Nothing";
             WindowManager = { EnableStandardClickToShowDesktop = false; };
