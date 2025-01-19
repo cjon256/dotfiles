@@ -3,6 +3,7 @@ return {
   dependencies = {
     { "nvim-lua/plenary.nvim", lazy = true },
     {
+      -- XXX unfortunately, this interferes with gitsigns...
       "purarue/gitsigns-yadm.nvim",
       lazy = true,
       opts = {
