@@ -55,10 +55,15 @@ return {
       end, { expr = true, desc = "Previous hunk {gitsigns}" })
 
       -- Actions
-      keymap({ "n", "v" }, "<leader>hs", gs.stage_hunk, { desc = "Stage hunk {gitsigns}" })
-      keymap({ "n", "v" }, "<leader>hr", gs.reset_hunk, { desc = "Reset hunk {gitsigns}" })
+      keymap("n", "<leader>hs", gs.stage_hunk, { desc = "Stage hunk {gitsigns}" })
+      keymap("v", "<leader>hs", function()
+        gs.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
+      end)
+      keymap("n", "<leader>hr", gs.reset_hunk, { desc = "Reset hunk {gitsigns}" })
+      keymap("v", "<leader>hr", function()
+        gs.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
+      end)
       keymap("n", "<leader>hS", gs.stage_buffer, { desc = "Stage buffer {gitsigns}" })
-      keymap("n", "<leader>hh", gs.stage_buffer, { desc = "Stage buffer {gitsigns}" })
       keymap("n", "<leader>hu", gs.undo_stage_hunk, { desc = "Undo stage hunk {gitsigns}" })
       keymap("n", "<leader>hR", gs.reset_buffer, { desc = "Reset buffer {gitsigns}" })
       keymap("n", "<leader>hp", gs.preview_hunk, { desc = "Preview hunk {gitsigns}" })
