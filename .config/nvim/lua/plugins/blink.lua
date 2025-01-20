@@ -22,7 +22,7 @@ return {
       ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
       ["<C-e>"] = { "hide", "fallback" },
 
-      ["<Tab>"] = { "select_and_accept", "fallback" },
+      -- ["<Tab>"] = { "select_and_accept", "fallback" },
       ["<C-y>"] = { "select_and_accept", "fallback" },
       ["<C-Right>"] = { "snippet_forward", "fallback" },
       ["<C-Left>"] = { "snippet_backward", "fallback" },
