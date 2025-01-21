@@ -193,6 +193,10 @@ alias git='noglob git'
 alias gcv='noglob git commit -v'
 alias gap='noglob git add --patch'
 
+alias y='yadm'
+alias yy='yadm st'
+alias ycv='yadm commit -v'
+
 # use nvim
 alias vim='nvim'
 alias vi='nvim'
