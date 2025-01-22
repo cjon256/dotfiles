@@ -39,7 +39,7 @@ return {
     -- or use `completion.list.selection = "manual" | "auto_insert"`'
     completion = {
       list = {
-        selection = "auto_insert",
+        selection = { auto_insert = true },
       },
     },
 
