@@ -43,6 +43,7 @@ keymap("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 keymap("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 keymap("n", "[b", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 keymap("n", "]b", "<cmd>bnext<cr>", { desc = "Next Buffer" })
+keymap("n", "<leader>nb", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 keymap("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 keymap("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 keymap("n", "<leader>bd", function()
@@ -103,6 +104,7 @@ keymap("n", "<leader>xq", "<cmd>copen<cr>", { desc = "Quickfix List" })
 
 keymap("n", "[q", vim.cmd.cprev, { desc = "Previous Quickfix" })
 keymap("n", "]q", vim.cmd.cnext, { desc = "Next Quickfix" })
+keymap("n", "<leader>nq", vim.cmd.cnext, { desc = "Next Quickfix" })
 
 -- formatting
 keymap({ "n", "v" }, "<leader>cf", function()
@@ -118,12 +120,15 @@ local diagnostic_goto = function(next, severity)
   end
 end
 keymap("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
-keymap("n", "]d", diagnostic_goto(true), { desc = "Next Diagnostic" })
 keymap("n", "[d", diagnostic_goto(false), { desc = "Prev Diagnostic" })
-keymap("n", "]e", diagnostic_goto(true, "ERROR"), { desc = "Next Error" })
+keymap("n", "]d", diagnostic_goto(true), { desc = "Next Diagnostic" })
+keymap("n", "<leader>nd", diagnostic_goto(true), { desc = "Next Diagnostic" })
 keymap("n", "[e", diagnostic_goto(false, "ERROR"), { desc = "Prev Error" })
-keymap("n", "]w", diagnostic_goto(true, "WARN"), { desc = "Next Warning" })
+keymap("n", "]e", diagnostic_goto(true, "ERROR"), { desc = "Next Error" })
+keymap("n", "<leader>ne", diagnostic_goto(true, "ERROR"), { desc = "Next Error" })
 keymap("n", "[w", diagnostic_goto(false, "WARN"), { desc = "Prev Warning" })
+keymap("n", "]w", diagnostic_goto(true, "WARN"), { desc = "Next Warning" })
+keymap("n", "<leader>nw", diagnostic_goto(true, "WARN"), { desc = "Next Warning" })
 
 -- stylua: ignore start
 
