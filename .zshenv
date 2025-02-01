@@ -13,6 +13,7 @@ fi
 export EDITOR=nvim
 export ZVM_VI_EDITOR=nvim
 export VISUAL=nvim
+export RIPGREP_CONFIG_PATH=~/.config/ripgreprc
 
 # Browser
 if [[ -z "$BROWSER" && "$OSTYPE" == darwin* ]]; then
