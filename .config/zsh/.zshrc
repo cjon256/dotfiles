@@ -120,7 +120,6 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-bindkey  autosuggest-accept
 # zinit light Aloxaf/fzf-tab
 
 # proper vi mode
@@ -130,6 +129,16 @@ zinit light "jeffreytse/zsh-vi-mode"
 # set up ^R with fzf
 zinit ice lucid wait'0'
 zinit light joshskidmore/zsh-fzf-history-search
+
+function zvm_after_init() {
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+  
+  # Keybindings
+  bindkey '^p' history-search-backward
+  bindkey '^n' history-search-forward
+  bindkey '^[w' kill-region
+  bindkey -M viins "^Y" autosuggest-accept
+}
 
 ################################################################################
 # Completion stuff
@@ -177,12 +186,6 @@ compdef _my_tf_aws=terraform
 compdef _my_tf_cf=terraform
 compdef _my_g=git
 compdef _c c
-
-# Keybindings
-# bindkey '^f' autosuggest-accept
-bindkey '^p' history-search-backward
-bindkey '^n' history-search-forward
-bindkey '^[w' kill-region
 
 ################################################################################
 # Aliases
