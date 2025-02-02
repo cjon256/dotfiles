@@ -15,3 +15,5 @@ theme = MaterialOcean
 font-family = Inconsolata LGC Nerd Font Mono
 font-size = 15.5
 
+keybind = cmd+m=ignore
+keybind = cmd+t=unbind
