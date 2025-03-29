@@ -27,6 +27,7 @@ brew "codecrafters"
 brew "dict"
 brew "diff-so-fancy"
 brew "direnv"
+brew "dockutil"
 brew "docutils"
 brew "harfbuzz"
 brew "pango"
@@ -110,13 +111,13 @@ cask "brave-browser"
 cask "bruno"
 cask "espanso"
 cask "firefox"
+cask "font-inconsolata-lgc-nerd-font"
 cask "ghostty"
 cask "gitkraken"
 cask "gittyup"
 cask "google-chrome"
 cask "hammerspoon"
 cask "homerow"
-cask "font-inconsolata-lgc-nerd-font"
 cask "karabiner-elements"
 cask "kitty"
 cask "rectangle-pro"
@@ -126,18 +127,23 @@ cask "thonny"
 cask "vivaldi"
 cask "wezterm"
 cask "xquartz"
-mas "1Password for Safari", id: 1569813296;
-mas "Agenda", id: 1287445660;
-mas "AmorphousDiskMark", id: 1168254295;
-mas "Amphetamine", id: 937984704;
-mas "Drafts", id: 1435957248;
-mas "GarageBand", id: 682658836;
+mas "1Password for Safari", id: 1569813296
+mas "Agenda", id: 1287445660
+mas "AmorphousDiskMark", id: 1168254295
+mas "Amphetamine", id: 937984704
+mas "Drafts", id: 1435957248
+mas "GarageBand", id: 682658836
 mas "GrandPerspective", id: 1111570163
-mas "Keynote", id: 409183694;
-mas "Numbers", id: 409203825;
-mas "Pages", id: 409201541;
-mas "Pixelmator Pro", id: 1289583905;
-mas "Save to Raindrop.io", id: 1549370672;
-mas "Things", id: 904280696;
-mas "Vimari", id: 1480933944;
-mas "iMovie", id: 408981434;
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Magnet", id: 441258766
+mas "Notion Web Clipper", id: 1559269364
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Pixelmator Pro", id: 1289583905
+mas "Save to Raindrop.io", id: 1549370672
+mas "Slack", id: 803453959
+mas "TechniCalc", id: 1504965415
+mas "The Unarchiver", id: 425424353
+mas "Things", id: 904280696
+mas "Vimari", id: 1480933944
