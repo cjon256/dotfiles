@@ -23,9 +23,11 @@ fi
 ################################################################################
 # Language environments
 # Go
-export GOPATH=$(/usr/local/go/bin/go env GOPATH)
-export GOROOT=$(/usr/local/go/bin/go env GOROOT)
-export GOBIN=$(/usr/local/go/bin/go env GOPATH)/bin
+# not needed anymore?
+# local GOEXEC='/opt/homebrew/bin/go'
+# export GOPATH=$($GOEXEC env GOPATH)
+# export GOROOT=$($GOEXEC env GOROOT)
+# export GOBIN=$($GOEXEC env GOPATH)/bin
 
 # Rust
 if [[ -f "$HOME/.cargo/env" ]]; then
