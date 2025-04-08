@@ -316,12 +316,28 @@
                                     "key_code": "l",
                                     "modifiers": {
                                         "mandatory": ["fn"],
-                                        "optional": ["shift", "control", "command", "option"]
+                                        "optional": ["control", "command", "option"]
                                     }
                                 },
                                 "to": [
                                     {
                                         "key_code": "q",
+                                        "modifiers": ["shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "mandatory": ["fn", "shift"],
+                                        "optional": ["control", "command", "option"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "1",
                                         "modifiers": ["shift"]
                                     }
                                 ],
@@ -462,7 +478,7 @@
                                     "key_code": "comma",
                                     "modifiers": {
                                         "mandatory": ["fn"],
-                                        "optional": ["shift", "control", "command", "option"]
+                                        "optional": ["control", "command", "option"]
                                     }
                                 },
                                 "to": [
@@ -471,6 +487,17 @@
                                         "modifiers": ["shift"]
                                     }
                                 ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "comma",
+                                    "modifiers": {
+                                        "mandatory": ["fn", "shift"],
+                                        "optional": ["control", "command", "option"]
+                                    }
+                                },
+                                "to": [{ "key_code": "grave_accent_and_tilde" }],
                                 "type": "basic"
                             },
                             {
@@ -782,12 +809,12 @@
                             "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
                         },
                         {
-                            "from": { "key_code": "f23" },
-                            "to": [{ "key_code": "vk_none" }]
-                        },
-                        {
                             "from": { "key_code": "f21" },
                             "to": [{ "key_code": "escape" }]
+                        },
+                        {
+                            "from": { "key_code": "f23" },
+                            "to": [{ "key_code": "vk_none" }]
                         }
                     ]
                 },
