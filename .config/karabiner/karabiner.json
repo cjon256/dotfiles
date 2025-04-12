@@ -338,8 +338,9 @@
                                 "to": [
                                     {
                                         "key_code": "1",
-                                        "modifiers": ["shift"]
-                                    }
+                                        "modifiers": ["left_shift"]
+                                    },
+                                    { "key_code": "close_bracket" }
                                 ],
                                 "type": "basic"
                             },
@@ -789,6 +790,26 @@
                                         "key_code": "tab",
                                         "modifiers": ["right_command", "right_option", "shift"]
                                     }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "print_screen !=",
+                        "manipulators": [
+                            {
+                                "description": "print_screen",
+                                "from": {
+                                    "key_code": "print_screen",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "1",
+                                        "modifiers": ["left_shift"]
+                                    },
+                                    { "key_code": "close_bracket" }
                                 ],
                                 "type": "basic"
                             }
