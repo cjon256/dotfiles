@@ -25,10 +25,10 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
-accordion-padding = 30
+accordion-padding = 10
 
 # Possible values: tiles|accordion
-default-root-container-layout = 'tiles'
+default-root-container-layout = 'accordion'
 
 # Possible values: horizontal|vertical|auto
 # 'auto' means: wide monitor (anything wider than high) gets horizontal orientation,
@@ -40,7 +40,7 @@ default-root-container-orientation = 'auto'
 # See https://nikitabobko.github.io/AeroSpace/guide#on-focus-changed-callbacks
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
 # on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
-on-focus-changed = ['move-mouse window-lazy-center']
+# on-focus-changed = ['move-mouse window-lazy-center']
 
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
@@ -62,10 +62,10 @@ preset = 'dvorak'
 [gaps]
 inner.horizontal = 0
 inner.vertical = 0
-outer.left = 3
-outer.bottom = 3
-outer.top = 2
-outer.right = 3
+outer.left = 2
+outer.bottom = 2
+outer.top = 1
+outer.right = 2
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -76,21 +76,22 @@ cmd-h = []     # Disable "hide application"
 cmd-alt-h = [] # Disable "hide others"
 
 # App launchers
-alt-a = 'workspace A'
+alt-a = 'exec-and-forget open /Applications/Anki.app'
 alt-p = 'exec-and-forget open /Applications/1Password.app'
-alt-k = 'workspace karabiner'
+alt-k = 'workspace util'
+alt-shift-k = ['move-node-to-workspace util', 'workspace util']
 alt-c = 'exec-and-forget open "/Applications/Google Chrome.app"'
-alt-f = 'exec-and-forget open /Applications/Firefox.app'
+# XXX doesn't seem to work?
+alt-f = 'exec-and-forget open /Applications/Firefox Developer Edition.app'
 alt-r = 'exec-and-forget open /System/Applications/Reminders.app'
 alt-d = 'exec-and-forget open /Applications/Drafts.app'
 alt-t = 'exec-and-forget open /Applications/Ghostty.app'
-alt-y = 'exec-and-forget open /Applications/Kitty.app'
 alt-n = 'exec-and-forget open /Applications/Things3.app'
 alt-s = 'exec-and-forget open /Applications/Slack.app'
 alt-w = 'exec-and-forget open /Applications/WezTerm.app'
 alt-v = 'exec-and-forget open /Applications/Vivaldi.app'
-alt-b = 'exec-and-forget open /System/Applications/TextEdit.app'
 alt-z = 'exec-and-forget open /System/Library/CoreServices/Finder.app'
+alt-shift-z = ['move-node-to-workspace finder', 'workspace finder']
 
 
 # All possible keys:
@@ -118,7 +119,8 @@ alt-z = 'exec-and-forget open /System/Library/CoreServices/Finder.app'
 # '''
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
-alt-slash = 'layout tiles horizontal vertical'
+alt-equal = 'layout tiles horizontal vertical'
+alt-backslash = 'layout floating'
 alt-comma = 'layout accordion horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
@@ -138,7 +140,6 @@ alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-alt-0 = 'workspace 0'
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
@@ -148,6 +149,7 @@ alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
+alt-0 = 'workspace 0'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
@@ -159,6 +161,7 @@ alt-shift-6 = ['move-node-to-workspace 6', 'workspace 6']
 alt-shift-7 = ['move-node-to-workspace 7', 'workspace 7']
 alt-shift-8 = ['move-node-to-workspace 8', 'workspace 8']
 alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
+alt-shift-0 = ['move-node-to-workspace 0', 'workspace 0']
 alt-shift-p = ['move-node-to-workspace P', 'workspace P']
 # alt-shift-k = [ 'move-node-to-workspace K', 'workspace K' ]
 # alt-shift-c = [ 'move-node-to-workspace C', 'workspace C' ]
@@ -177,6 +180,7 @@ alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
+alt-period = 'fullscreen off'
 alt-shift-semicolon = 'mode service'
 
 alt-shift-r = 'mode resize'
@@ -192,35 +196,24 @@ esc = 'mode main'
 
 [workspace-to-monitor-force-assignment]
 # 1 = 1                            # Monitor sequence number from left to right. 1-based indexing
-0 = 'main'                     # Main monitor
-1 = 'main'                     # Main monitor
-2 = 'main'                     # Main monitor
-3 = 'main'                     # Main monitor
-4 = 'main'                     # Main monitor
-5 = 'main'                     # Main monitor
-6 = 'main'                     # Main monitor
-7 = 'secondary'                # Non-main monitor in case when there are only two monitors
-8 = 'secondary'                # Non-main monitor in case when there are only two monitors
-9 = 'secondary'                # Non-main monitor in case when there are only two monitors
-kitty = 'secondary'
-ghostty = 'main'
-firefox = 'main'
-steam = 'main'
-reminders_things = 'secondary'
-drafts = 'secondary'
+1 = 'main'           # Main monitor
+2 = 'main'           # Main monitor
+3 = 'main'           # Main monitor
+4 = 'main'           # Main monitor
+5 = 'main'           # Main monitor
+6 = 'main'           # Main monitor
+7 = 'secondary'      # Non-main monitor in case when there are only two monitors
+8 = 'secondary'      # Non-main monitor in case when there are only two monitors
+9 = 'secondary'      # Non-main monitor in case when there are only two monitors
+0 = 'secondary'      # Non-main monitor in case when there are only two monitors
+util = 'main'
 finder = 'main'
-alfred_prefs = 'main'
-wezterm = 'main'
-sysprefs = 'main'
-vivaldi = 'main'
-chrome = 'main'
-brave = 'main'
-onepassword = 'main'
-karabiner = 'main'
-agenda = 'main'
+steam = 'main'
+activity = 'main'
 calendar = 'main'
-textedit = 'main'
-slackmacap = 'secondary'
+drafts = 'secondary'
+agenda = 'main'
+slack = 'secondary'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -239,86 +232,151 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
-[[on-window-detected]]
-if.app-id = 'net.kovidgoyal.kitty'
-run = "move-node-to-workspace kitty"
+##############################################################################
+# Terminals
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
-run = "move-node-to-workspace ghostty"
+run = "move-node-to-workspace 4"
+
+[[on-window-detected]]
+if.app-id = 'com.googlecode.iterm2'
+run = "move-node-to-workspace 4"
+
+[[on-window-detected]]
+if.app-id = 'com.github.wez.wezterm'
+run = "move-node-to-workspace 4"
+
+# gets its own space on the vertical montior
+[[on-window-detected]]
+if.app-id = 'net.kovidgoyal.kitty'
+run = "move-node-to-workspace 9"
+
+##############################################################################
+# Browsers
 
 [[on-window-detected]]
 if.app-id = 'org.mozilla.firefox'
-run = "move-node-to-workspace firefox"
+run = "move-node-to-workspace 5"
+
+[[on-window-detected]]
+if.app-id = 'org.mozilla.firefoxdeveloperedition'
+run = "move-node-to-workspace 5"
+
+[[on-window-detected]]
+if.app-id = 'com.brave.Browser'
+run = "move-node-to-workspace 5"
+
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+run = "move-node-to-workspace 5"
+
+# gets its own space on the vertical montior
+[[on-window-detected]]
+if.app-id = 'com.vivaldi.Vivaldi'
+run = "move-node-to-workspace 0"
+
+##############################################################################
+# Utils (floating, use util workspace
+
+[[on-window-detected]]
+if.app-id = 'org.pqrs.Karabiner-Elements.Settings'
+run = ["layout floating", "move-node-to-workspace util"]
+
+[[on-window-detected]]
+if.app-id = 'org.pqrs.Karabiner-EventViewer'
+run = ["layout floating", "move-node-to-workspace util"]
+
+[[on-window-detected]]
+if.app-id = 'com.runningwithcrayons.Alfred-Preferences'
+run = ["layout floating", "move-node-to-workspace util"]
+
+[[on-window-detected]]
+if.app-id = 'com.apple.systempreferences'
+run = ["layout floating", "move-node-to-workspace util"]
+
+[[on-window-detected]]
+if.app-id = 'com.apple.AppStore'
+run = ["layout floating", "move-node-to-workspace util"]
+
+[[on-window-detected]]
+if.app-id = 'com.superultra.Homerow'
+run = ["layout floating", "move-node-to-workspace util"]
+
+[[on-window-detected]]
+if.app-id = 'com.kaihatsubu.apps.CursorHighlighter'
+run = ["layout floating", "move-node-to-workspace util"]
+
+##############################################################################
+# Other Apps (Main Monitor)
+
+[[on-window-detected]]
+if.app-id = 'com.gns3.gns3'
+run = "move-node-to-workspace 4"
+
+[[on-window-detected]]
+if.app-id = 'net.ankiweb.dtop'
+run = "move-node-to-workspace 3"
+
+# Dedicated Unsendable Fullscreen (can be closed and launched again easily)
+
+[[on-window-detected]]
+if.app-id = 'com.apple.ActivityMonitor'
+run = "move-node-to-workspace activity"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.iCal'
+run = "move-node-to-workspace calendar"
+
+##############################################################################
+# Other Apps (Secondary Verticol Monitor)
 
 [[on-window-detected]]
 if.app-id = 'com.apple.reminders'
-run = "move-node-to-workspace reminders_things"
+run = "move-node-to-workspace 8"
 
 [[on-window-detected]]
 if.app-id = 'com.culturedcode.ThingsMac'
-run = "move-node-to-workspace reminders_things"
+run = "move-node-to-workspace 8"
+
+# Dedicated Unsendable Fullscreen (can be closed and launched again easily)
 
 [[on-window-detected]]
 if.app-id = 'com.agiletortoise.Drafts-OSX'
 run = "move-node-to-workspace drafts"
 
 [[on-window-detected]]
-if.app-id = 'com.apple.finder'
-run = "move-node-to-workspace finder"
-[[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
-run = "move-node-to-workspace slackmacap"
-
-[[on-window-detected]]
-if.app-id = 'com.runningwithcrayons.Alfred-Preferences'
-run = "move-node-to-workspace alfred_prefs"
-
-[[on-window-detected]]
-if.app-id = 'com.github.wez.wezterm'
-run = "move-node-to-workspace wezterm"
-
-[[on-window-detected]]
-if.app-id = 'com.apple.systempreferences'
-run = "move-node-to-workspace sysprefs"
-
-[[on-window-detected]]
-if.app-id = 'com.vivaldi.Vivaldi'
-run = "move-node-to-workspace vivaldi"
-
-[[on-window-detected]]
-if.app-id = 'com.google.Chrome'
-run = "move-node-to-workspace chrome"
-
-[[on-window-detected]]
-if.app-id = 'com.brave.Browser'
-run = "move-node-to-workspace brave"
-
-# doing this makes the approvals dissappear...
-# [[on-window-detected]]
-# if.app-id = 'com.1password.1password'
-# run = "move-node-to-workspace onepassword"
-
-[[on-window-detected]]
-if.app-id = 'org.pqrs.Karabiner-Elements.Settings'
-run = "move-node-to-workspace karabiner"
-
-[[on-window-detected]]
-if.app-id = 'org.pqrs.Karabiner-EventViewer'
-run = "move-node-to-workspace karabiner"
+run = "move-node-to-workspace slack"
 
 [[on-window-detected]]
 if.app-id = 'com.momenta.agenda.macos'
 run = "move-node-to-workspace agenda"
 
+##############################################################################
+# Special Cases
+
 [[on-window-detected]]
-if.app-id = 'com.apple.iCal'
-run = "move-node-to-workspace calendar"
+if.app-id = 'com.apple.finder'
+run = ['layout tiling', "move-node-to-workspace finder"]
 
 [[on-window-detected]]
 if.app-id = 'com.apple.TextEdit'
-run = "move-node-to-workspace textedit"
+run = ['layout floating', "move-node-to-workspace 2"]
 
 [[on-window-detected]]
+if.app-id = 'com.1password.1password'
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Preview'
+run = ["layout floating", "move-node-to-workspace 1"]
+
+# Dedicated Unsendable Screen (can be closed and launched again easily)
+[[on-window-detected]]
 if.app-id = 'com.valvesoftware.steam'
-run = 'move-node-to-workspace steam'
+run = ['layout floating', 'move-node-to-workspace steam']
+
+##############################################################################
+##############################################################################
+##############################################################################
