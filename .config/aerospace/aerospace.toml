@@ -83,7 +83,7 @@ alt-shift-u = ['move-node-to-workspace util', 'workspace util']
 alt-c = 'exec-and-forget open "/Applications/Google Chrome.app"'
 # XXX doesn't seem to work?
 alt-g = 'exec-and-forget open /Applications/GNS3.app'
-alt-f = 'exec-and-forget open /Applications/Firefox Developer Edition.app'
+alt-f = 'exec-and-forget open "/Applications/Firefox Developer Edition.app"'
 alt-r = 'exec-and-forget open /System/Applications/Reminders.app'
 alt-d = 'exec-and-forget open /Applications/Drafts.app'
 alt-t = 'exec-and-forget open /Applications/iTerm.app'
@@ -361,6 +361,11 @@ run = "move-node-to-workspace agenda"
 
 ##############################################################################
 # Special Cases
+#
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'GNS3-WebClient-pack'
+run = ['layout tiling', "move-node-to-workspace 1"]
 
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
