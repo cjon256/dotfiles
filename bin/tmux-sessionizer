@@ -3,30 +3,50 @@
 if [[ $# -eq 1 ]]; then
   selected=$1
 else
-  selected=$(find ~/Projects/* ~/Projects/codecrafters/** ~/Projects/Exercism/** ~ ~/.config/** ~/.local/share/chezmoi/** ~/src ~/go/src -mindepth 0 -maxdepth 1 -type d | fzf)
+  selected=$(
+    (
+      grep -r "^Host [^*]" $HOME/.ssh/config $HOME/.ssh/config.d | awk '{print$2}' | sed 's/^/ssh:/' &&
+        find ~/Projects/* ~/Projects/codecrafters/** ~/Projects/Exercism/** ~ ~/.config/** ~/.local/share/chezmoi/** ~/src ~/go/src -mindepth 0 -maxdepth 1 -type d
+    ) | fzf
+  )
+  # tmux new-window -t ssh: -n "$TMUX_SSH_TARGET" "ssh $TMUX_SSH_TARGET") &&
 fi
 
 if [[ -z $selected ]]; then
   exit 0
 fi
 
-if [[ -d $selected ]]; then
-  zoxide add $selected &>/dev/null
+TMUX_RUNNING=$(pgrep tmux)
+if [[ $selected == ssh:* ]]; then
+  TMUX_SSH_TARGET="${selected#ssh:}"
+  if [[ -z $TMUX ]] && [[ -z $TMUX_RUNNING ]]; then
+    tmux new-session -s "$TMUX_SSH_TARGET" ssh $TMUX_SSH_TARGET
+    echo "running"
+  fi
+  if ! tmux has-session -t="$TMUX_SSH_TARGET" 2>/dev/null; then
+    tmux new-session -ds "$TMUX_SSH_TARGET" ssh $TMUX_SSH_TARGET
+  fi
+
+  # tmux new-window -t ssh: -n "$TMUX_SSH_TARGET" "ssh $TMUX_SSH_TARGET") &&
+  tmux switch-client -t "$TMUX_SSH_TARGET"
+else
+  if [[ -d $selected ]]; then
+    zoxide add $selected &>/dev/null
+  fi
+
+  selected_name=$(basename "$selected" | tr . _)
+
+  if [[ -z $TMUX ]] && [[ -z $TMUX_RUNNING ]]; then
+    tmux new-session -s "$selected_name" -c "$selected"
+    exit 0
+  fi
+
+  if ! tmux has-session -t="$selected_name" 2>/dev/null; then
+    tmux new-session -ds "$selected_name" -c "$selected"
+  fi
+
+  ALTERNATIVE_FILE=~/.config/tmux/alternate_session
+  tmux display-message -p '#S' >"$ALTERNATIVE_FILE"
+
+  tmux switch-client -t "$selected_name"
 fi
-
-selected_name=$(basename "$selected" | tr . _)
-tmux_running=$(pgrep tmux)
-
-if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-  tmux new-session -s "$selected_name" -c "$selected"
-  exit 0
-fi
-
-if ! tmux has-session -t="$selected_name" 2>/dev/null; then
-  tmux new-session -ds "$selected_name" -c "$selected"
-fi
-
-ALTERNATIVE_FILE=~/.config/tmux/alternate_session
-tmux display-message -p '#S' >"$ALTERNATIVE_FILE"
-
-tmux switch-client -t "$selected_name"
