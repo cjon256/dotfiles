@@ -1,0 +1,9 @@
+I don't need to know much as don't use many of its features, preferring tmux
+
+ctrl-a for commands by default
+
+ctrl-a d     = detach
+screen -ls   = list existing sessions
+screen -r    = join an existing session
+
+
