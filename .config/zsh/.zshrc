@@ -249,6 +249,13 @@ setopt HIST_FIND_NO_DUPS
 setopt INC_APPEND_HISTORY
 
 ################################################################################
+# Autoenv
+AUTOENV=/opt/homebrew/opt/autoenv/activate.sh
+if [[ -f $AUTOENV ]]; then
+  source $AUTOENV
+fi
+
+################################################################################
 # Prompt (details in ~/.config/starship.toml)
 eval "$(starship init zsh)"
 
