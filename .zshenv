@@ -90,3 +90,7 @@ export DISABLE_MAGIC_FUNCTIONS=true
 # XXX why was this a good idea?
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
 
+## Set vagrant provider to vmware if avialable
+if [[ -d "/Applications/VMware Fusion.app" ]]; then
+  VAGRANT_DEFAULT_PROVIDER=vmware_desktop
+fi
