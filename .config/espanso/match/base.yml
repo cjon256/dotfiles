@@ -73,3 +73,5 @@ matches:
   #
   - trigger: ";ss"
     replace: "ss -tulpn"
+  - trigger: ";tm"
+    replace: "™"
