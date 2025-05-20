@@ -11,6 +11,9 @@ config.color_scheme = 'Night Owl (Gogh)'
 config.font = wezterm.font "Inconsolata LGC Nerd Font Mono"
 config.font_size = 15.5
 
+config.initial_rows = 71
+config.initial_cols = 315
+
 config.enable_tab_bar = false
 
 config.enable_scroll_bar = false
