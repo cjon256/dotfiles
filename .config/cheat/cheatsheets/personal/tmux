@@ -1,38 +1,67 @@
-Ctrl-b h       # select pane L (you can use ; for this too)
-Ctrl-b l       # select pane R
-Ctrl-b k       # select pane U
-Ctrl-b j       # select pane D
+
+ESSENTIAL SETUP if on remote system with no config
+# my custom stuff will obviously not be present there
+:set -g mouse on
+:setw -g mode-keys vi
+
+####################################################################################################
+# GENERAL KEYS
+Ctrl-b Ctrl-r  # reload tmux config (also C-r)
+Ctrl-b :       # command prompt
+Ctrl-b d       # detach tmux client
+
+####################################################################################################
+# SESSIONS
+:new           # to create a new session by hand (but probably not used)
+Ctrl-b $       # rename session
+Ctrl-b s       # switch session menu
+Ctrl-b f       # fzf based sessionizer ### MY_ADDON
+Ctrl-b Ctrl-6  # alternate session ### MY_ADDON
+
+####################################################################################################
+# WINDOWS
+Ctrl-b c       # new window
+Ctrl-b ,       # rename window (probably not what you want)
+Ctrl-b w       # switch window menu
+Ctrl-b n       # go to next window
+Ctrl-b p       # go to previous window
+Ctrl-b 0-9     # switch to window by #
+# is the below actually useful?
+Ctrl-b :swap-window -s [0-9] -t [0-9]
+Note: on configured system, thes are not used much... I work with sessions mostly
+
+####################################################################################################
+# PANES (usually I only have one)
 Ctrl-b "       # split up-down
 Ctrl-b %       # split left-right
-Ctrl-b {/}     # move panes around up/down
+Ctrl-b ;       # select last pane
+Ctrl-b x       # kill pane menu ### MY_ADDON
+Ctrl-b ←       # select pane L (you can use Ctrl-h; for this too)
+Ctrl-b →       # select pane R (you can use Ctrl-l; for this too)
+Ctrl-b ↑       # select pane U (you can use Ctrl-k; for this too)
+Ctrl-b ↓       # select pane D (you can use Ctrl-j; for this too)
+Ctrl-b {       # move panes around up
+Ctrl-b }       # move panes around down
+Ctrl-b Space   # next layout
+:select-layout { even-horizontal | even-vertical | main-horizontal | main-vertical | tiled }
 
-Ctrl-b Ctrl-6  # alternate session
+####################################################################################################
+# COPY MODE (honestly, I just use mouse, I don't copy from tmux that often)
 Ctrl-b [       # enter copy mode
-Ctrl-b s       # session list/chooser
-Ctrl-b w       # window list/chooser (usually not what you want)
-
-Ctrl-b Space   # next layout (C-Space for prev)
-
-Ctrl-b f       # fzf based sessionizer
-Ctrl-b :       # command prompt
-Ctrl-b r       # reload tmux config (also C-r)
-Ctrl-b d       # detach tmux client
-Ctrl-b x       # kill pane menu
-Ctrl-b $       # rename session (, for window but not what you want)
-
-
-Copy Mode - enter with Ctrl-b [
-===============================
 Space         # begin selection mode (also v)
 Enter         # copy-pipe and cancel (also C-j)
 C-c           # cancel copy mode
 C-u/C-d       # halfpage up / down
 Esc           # clear selection
-C-v           # rectangle toggle
+... after that keys are very vi like
 
 Paste buffer stuff
 ==================
-Ctrl-b =       # supposed to choose buffer?
+Ctrl-b =       # select buffer (from list)
 Ctrl-b ]       # paste buffer
 
 Resize panes with Ctrl-b and Ctrl+Arrow keys
+
+
+
+
