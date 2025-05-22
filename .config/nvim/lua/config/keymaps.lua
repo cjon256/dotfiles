@@ -245,6 +245,7 @@ keymap("t", "<C-h><C-h>", "<CMD>ToggleTerm<CR>", { desc = "Toggle terminal (term
 keymap("t", "<C-t><C-t>", "<CMD>ToggleTerm<CR>", { desc = "Toggle terminal (terminal mode)" })
 keymap("t", "<C-n><C-n>", "<CMD>ToggleTerm<CR>", { desc = "Toggle terminal (terminal mode)" })
 keymap("t", "<C-t><Esc>", "<C-\\><C-n>", { desc = "Exit terminal (terminal mode)" })
+keymap("t", "<C-t><C-c>", "<C-\\><C-n>", { desc = "Exit terminal (terminal mode)" })
 keymap("t", "<C-t><C-w>", "<C-\\><C-n><C-w><C-w>", { desc = "Move to other pane (terminal mode)" })
 
 keymap('n', "<leader>Tn", "<cmd>ToggleTermSetName<cr>", { desc = "Set term name" })
