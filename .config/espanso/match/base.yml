@@ -38,40 +38,36 @@ matches:
   #
   #   - trigger: ";hello"
   #     replace: "hi there"
-  #
-  #   - trigger: ";shr"
-  #     replace: "¯\\_(ツ)_/¯"
-  #
-  #   - trigger: ";cmd"
-  #     replace: "⌘"
-  #
-  #   - trigger: ";opt"
-  #     replace: "⌥"
-  #
-  #   - trigger: ";shi"
-  #     replace: "⇧"
-  #
-  #   - trigger: ";ctrl"
-  #     replace: "⌃"
-  #
-  #   - trigger: ";ctl"
-  #     replace: "⌃"
-  #
-  #   - trigger: ";up"
-  #     replace: "↑"
-  #
-  #   - trigger: ";left"
-  #     replace: "←"
-  #
-  #   - trigger: ";right"
-  #     replace: "→"
-  #
-  #   - trigger: ";down"
-  #     replace: "↓"
-  #
-  #   # end config
-  #
+
+  - trigger: ";shr"
+    replace: "¯\\_(ツ)_/¯"
+
+  - trigger: ";cmd"
+    replace: "⌘"
+
+  - trigger: ";opt"
+    replace: "⌥"
+
+  - trigger: ";shi"
+    replace: "⇧"
+
+  - trigger: ";ctrl"
+    replace: "⌃"
+
+  - trigger: ";up"
+    replace: "↑"
+
+  - trigger: ";left"
+    replace: "←"
+
+  - trigger: ";right"
+    replace: "→"
+
+  - trigger: ";down"
+    replace: "↓"
+
   - trigger: ";ss"
     replace: "ss -tulpn"
+
   - trigger: ";tm"
     replace: "™"
