@@ -9,7 +9,6 @@ else
         find ~/Projects/* ~/Projects/codecrafters/** ~/Projects/Exercism/** ~ ~/.config/** ~/.local/share/chezmoi/** ~/src ~/go/src -mindepth 0 -maxdepth 1 -type d
     ) | fzf
   )
-  # tmux new-window -t ssh: -n "$TMUX_SSH_TARGET" "ssh $TMUX_SSH_TARGET") &&
 fi
 
 if [[ -z $selected ]]; then
@@ -19,20 +18,19 @@ fi
 TMUX_RUNNING=$(pgrep tmux)
 if [[ $selected == ssh: ]]; then
   selected=$(grep -r "^Host [^*]" $HOME/.ssh/config $HOME/.ssh/config.d | awk '{print$2}' | fzf)
-  TMUX_SSH_TARGET="${selected}"
   if [[ -z $selected ]]; then
     exit 0
   fi
   if [[ -z $TMUX ]] && [[ -z $TMUX_RUNNING ]]; then
-    tmux new-session -s "$TMUX_SSH_TARGET" ssh $TMUX_SSH_TARGET
+    tmux new-session -s "$selected" ssh $selected
     echo "running"
   fi
-  if ! tmux has-session -t="$TMUX_SSH_TARGET" 2>/dev/null; then
-    tmux new-session -ds "$TMUX_SSH_TARGET" ssh $TMUX_SSH_TARGET
+  if ! tmux has-session -t="$selected" 2>/dev/null; then
+    tmux new-session -ds "$selected" ssh $selected
   fi
 
-  # tmux new-window -t ssh: -n "$TMUX_SSH_TARGET" "ssh $TMUX_SSH_TARGET") &&
-  tmux switch-client -t "$TMUX_SSH_TARGET"
+  # tmux new-window -t ssh: -n "$selected" "ssh $selected") &&
+  tmux switch-client -t "$selected"
 else
   if [[ -d $selected ]]; then
     zoxide add $selected &>/dev/null
