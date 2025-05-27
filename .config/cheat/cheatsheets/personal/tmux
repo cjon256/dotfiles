@@ -9,6 +9,7 @@ ESSENTIAL SETUP if on remote system with no config
 Ctrl-b Ctrl-r  # reload tmux config (also C-r)
 Ctrl-b :       # command prompt
 Ctrl-b d       # detach tmux client
+:customize-mode -Z  # is interesting
 
 ####################################################################################################
 # SESSIONS
@@ -36,18 +37,18 @@ Ctrl-b "       # split up-down
 Ctrl-b %       # split left-right
 Ctrl-b ;       # select last pane
 Ctrl-b x       # kill pane menu ### MY_ADDON
-Ctrl-b ←       # select pane L (you can use Ctrl-h; for this too)
-Ctrl-b →       # select pane R (you can use Ctrl-l; for this too)
-Ctrl-b ↑       # select pane U (you can use Ctrl-k; for this too)
-Ctrl-b ↓       # select pane D (you can use Ctrl-j; for this too)
+Ctrl-b Ctrl-hjkl    # select panes by direction (vi style, no prefix) ## MY_ADDON
+Ctrl-b ←↓↑→    # select pane by direction (you can use Ctrl-hjkl; for this too)
+Ctrl-b z       # zoom pane
 Ctrl-b {       # move panes around up
 Ctrl-b }       # move panes around down
 Ctrl-b Space   # next layout
 :select-layout { even-horizontal | even-vertical | main-horizontal | main-vertical | tiled }
+:display-panes      # shows the pane numbers... useful?
 
 ####################################################################################################
 # COPY MODE (honestly, I just use mouse, I don't copy from tmux that often)
-Ctrl-b [       # enter copy mode
+Ctrl-b [      # enter copy mode
 Space         # begin selection mode (also v)
 Enter         # copy-pipe and cancel (also C-j)
 C-c           # cancel copy mode
@@ -61,7 +62,6 @@ Ctrl-b =       # select buffer (from list)
 Ctrl-b ]       # paste buffer
 
 Resize panes with Ctrl-b and Ctrl+Arrow keys
-
 
 
 
