@@ -71,3 +71,15 @@ matches:
 
   - trigger: ";tm"
     replace: "™"
+
+  - trigger: ";->"
+    replace: "→"
+
+  - trigger: ";<-"
+    replace: "←"
+
+  - trigger: ";^^"
+    replace: "↑"
+
+  - trigger: ";vv"
+    replace: "↓"
