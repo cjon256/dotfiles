@@ -18,5 +18,151 @@ theme = MaterialOcean
 font-family = Inconsolata LGC Nerd Font Mono
 font-size = 15.5
 
-keybind = cmd+m=ignore
+keybind = cmd+m=unbind
 keybind = cmd+t=unbind
+keybind = cmd+n=unbind
+keybind = super+alt+shift+j=unbind
+keybind = super+alt+shift+w=unbind
+keybind = super+alt+i=unbind
+keybind = super+alt+w=unbind
+keybind = super+alt+up=unbind
+keybind = super+alt+down=unbind
+keybind = super+alt+right=unbind
+keybind = super+alt+left=unbind
+keybind = super+ctrl+f=unbind
+keybind = super+ctrl+equal=unbind
+keybind = super+ctrl+up=unbind
+keybind = super+ctrl+down=unbind
+keybind = super+ctrl+right=unbind
+keybind = super+ctrl+left=unbind
+keybind = super+shift+d=unbind
+keybind = super+shift+j=unbind
+keybind = super+shift+v=unbind
+keybind = super+shift+w=unbind
+keybind = super+shift+comma=unbind
+keybind = super+shift+left_bracket=unbind
+keybind = super+shift+right_bracket=unbind
+keybind = super+shift+up=unbind
+keybind = super+shift+down=unbind
+keybind = super+shift+enter=unbind
+keybind = ctrl+shift+tab=unbind
+keybind = super+a=unbind
+keybind = super+c=unbind
+keybind = super+d=unbind
+keybind = super+k=unbind
+keybind = super+m=unbind
+keybind = super+n=unbind
+keybind = super+q=unbind
+keybind = super+v=unbind
+keybind = super+w=unbind
+keybind = super+zero=unbind
+keybind = super+physical:one=unbind
+
+keybind = super+physical:two=unbind
+keybind = super+physical:three=unbind
+keybind = super+physical:four=unbind
+keybind = super+physical:five=unbind
+keybind = super+physical:six=unbind
+keybind = super+physical:seven=unbind
+keybind = super+physical:eight=unbind
+keybind = super+physical:nine=unbind
+keybind = super+comma=unbind
+keybind = super+minus=unbind
+keybind = super+plus=unbind
+keybind = super+equal=unbind
+keybind = super+left_bracket=unbind
+keybind = super+right_bracket=unbind
+keybind = super+up=unbind
+keybind = super+down=unbind
+keybind = super+right=unbind
+keybind = super+left=unbind
+keybind = super+home=unbind
+keybind = super+end=unbind
+keybind = super+page_up=unbind
+keybind = super+page_down=unbind
+keybind = super+enter=unbind
+keybind = super+backspace=unbind
+keybind = alt+right=unbind
+keybind = alt+left=unbind
+keybind = ctrl+tab=unbind
+keybind = shift+up=unbind
+keybind = shift+down=unbind
+keybind = shift+right=unbind
+keybind = shift+left=unbind
+keybind = shift+home=unbind
+keybind = shift+end=unbind
+keybind = shift+page_up=unbind
+keybind = shift+page_down=unbind
+
+
+# super + alt   + shift + j       write_screen_file:open
+# super + alt   + shift + w       close_all_windows
+# super + alt   + i               inspector:toggle
+# super + alt   + w               close_tab
+# super + alt   + up              goto_split:up
+# super + alt   + down            goto_split:down
+# super + alt   + right           goto_split:right
+# super + alt   + left            goto_split:left
+# super + ctrl  + f               toggle_fullscreen
+# super + ctrl  + equal           equalize_splits
+# super + ctrl  + up              resize_split:up,10
+# super + ctrl  + down            resize_split:down,10
+# super + ctrl  + right           resize_split:right,10
+# super + ctrl  + left            resize_split:left,10
+# super + shift + d               new_split:down
+# super + shift + j               write_screen_file:paste
+# super + shift + v               paste_from_selection
+# super + shift + w               close_window
+# super + shift + comma           reload_config
+# super + shift + left_bracket    previous_tab
+# super + shift + right_bracket   next_tab
+# super + shift + up              jump_to_prompt:-1
+# super + shift + down            jump_to_prompt:1
+# super + shift + enter           toggle_split_zoom
+# ctrl  + shift + tab             previous_tab
+# super + a                       select_all
+# super + c                       copy_to_clipboard
+# super + d                       new_split:right
+# super + k                       clear_screen
+# super + m                       ignore
+# super + n                       new_window
+# super + q                       quit
+# super + v                       paste_from_clipboard
+# super + w                       close_surface
+# super + zero                    reset_font_size
+# super + physical:one            goto_tab:1
+# super + physical:two            goto_tab:2
+# super + physical:three          goto_tab:3
+# super + physical:four           goto_tab:4
+# super + physical:five           goto_tab:5
+# super + physical:six            goto_tab:6
+# super + physical:seven          goto_tab:7
+# super + physical:eight          goto_tab:8
+# super + physical:nine           last_tab
+# super + comma                   open_config
+# super + minus                   decrease_font_size:1
+# super + plus                    increase_font_size:1
+# super + equal                   increase_font_size:1
+# super + left_bracket            goto_split:previous
+# super + right_bracket           goto_split:next
+# super + up                      jump_to_prompt:-1
+# super + down                    jump_to_prompt:1
+# super + right                   text:\x05
+# super + left                    text:\x01
+# super + home                    scroll_to_top
+# super + end                     scroll_to_bottom
+# super + page_up                 scroll_page_up
+# super + page_down               scroll_page_down
+# super + enter                   toggle_fullscreen
+# super + backspace               text:\x15
+# alt   + right                   esc:f
+# alt   + left                    esc:b
+# ctrl  + tab                     next_tab
+# shift + up                      adjust_selection:up
+# shift + down                    adjust_selection:down
+# shift + right                   adjust_selection:right
+# shift + left                    adjust_selection:left
+# shift + home                    adjust_selection:home
+# shift + end                     adjust_selection:end
+# shift + page_up                 adjust_selection:page_up
+# shift + page_down               adjust_selection:page_down
