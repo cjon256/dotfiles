@@ -256,6 +256,16 @@ if [[ -f $AUTOENV ]]; then
 fi
 
 ################################################################################
+# Task managers
+
+if [[ -x `which dstask` ]]; then
+alias d=dstask
+fi
+if [[ -x `which taskell` ]]; then
+  alias tk=taskell
+fi
+
+################################################################################
 # Prompt (details in ~/.config/starship.toml)
 eval "$(starship init zsh)"
 
