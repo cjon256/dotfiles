@@ -259,10 +259,12 @@ fi
 # Task managers
 
 if [[ -x `which dstask` ]]; then
-alias d=dstask
+  alias d=dstask
 fi
 if [[ -x `which taskell` ]]; then
-  alias tk=taskell
+  function tk() {
+    (cd ~/Projects/; taskell)
+  }
 fi
 
 ################################################################################
