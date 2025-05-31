@@ -262,6 +262,7 @@ if [[ -x `which dstask` ]]; then
   alias d=dstask
 fi
 if [[ -x `which taskell` ]]; then
+  alias t=taskell
   function tk() {
     (cd ~/Projects/; taskell)
   }
