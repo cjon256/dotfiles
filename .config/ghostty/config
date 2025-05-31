@@ -46,14 +46,15 @@ keybind = super+shift+up=unbind
 keybind = super+shift+down=unbind
 keybind = super+shift+enter=unbind
 keybind = ctrl+shift+tab=unbind
-keybind = super+a=unbind
-keybind = super+c=unbind
+keybind = super+a=select_all
+keybind = super+c=copy_to_clipboard
 keybind = super+d=unbind
 keybind = super+k=unbind
 keybind = super+m=unbind
 keybind = super+n=unbind
 keybind = super+q=unbind
-keybind = super+v=unbind
+keybind = super+r=reload_config
+keybind = super+v=paste_from_clipboard
 keybind = super+w=unbind
 keybind = super+zero=unbind
 keybind = super+physical:one=unbind
@@ -131,6 +132,7 @@ keybind = shift+page_down=unbind
 # super + w                       close_surface
 # super + zero                    reset_font_size
 # super + physical:one            goto_tab:1
+
 # super + physical:two            goto_tab:2
 # super + physical:three          goto_tab:3
 # super + physical:four           goto_tab:4
@@ -166,3 +168,4 @@ keybind = shift+page_down=unbind
 # shift + end                     adjust_selection:end
 # shift + page_up                 adjust_selection:page_up
 # shift + page_down               adjust_selection:page_down
+
