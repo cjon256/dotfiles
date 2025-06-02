@@ -53,6 +53,9 @@ matches:
   - trigger: ";ctrl"
     replace: "⌃"
 
+  - trigger: ";modifiers"
+    replace: "⌃⌥⇧⌘"
+
   - trigger: ";up"
     replace: "↑"
 
