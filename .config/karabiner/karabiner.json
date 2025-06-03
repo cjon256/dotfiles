@@ -1875,46 +1875,6 @@
                         ]
                     },
                     {
-                        "description": "f18 CAWX",
-                        "enabled": false,
-                        "manipulators": [
-                            {
-                                "description": "f18 CAWX",
-                                "from": {
-                                    "key_code": "f18",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_control",
-                                        "modifiers": ["left_option", "left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "f19 CAWS",
-                        "enabled": false,
-                        "manipulators": [
-                            {
-                                "description": "f19 CAWS",
-                                "from": {
-                                    "key_code": "f19",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_control",
-                                        "modifiers": ["left_option", "left_command", "left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "f24 shift-fn",
                         "manipulators": [
                             {
@@ -2452,122 +2412,17 @@
                         ]
                     },
                     {
-                        "description": "cmd-tab is cmd-opt-tab (because task switching sucks)",
-                        "enabled": false,
                         "manipulators": [
                             {
-                                "description": "needed for alt-tab",
+                                "description": "Change ⌃⌥⌘M to ⌃⌥⇧⌘M.",
                                 "from": {
-                                    "key_code": "tab",
-                                    "modifiers": { "mandatory": ["right_command"] }
+                                    "key_code": "m",
+                                    "modifiers": { "mandatory": ["command", "control", "option"] }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "tab",
-                                        "modifiers": ["right_command", "right_option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "needed for alt-tab",
-                                "from": {
-                                    "key_code": "tab",
-                                    "modifiers": { "mandatory": ["command", "shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": ["right_command", "right_option", "shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "print_screen toggle mouse highlight",
-                        "manipulators": [
-                            {
-                                "description": "print_screen",
-                                "from": {
-                                    "key_code": "print_screen",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "j",
-                                        "modifiers": ["left_command", "left_control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Change spacebar to right option on press and hold",
-                        "enabled": false,
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "key_code": "right_option" }],
-                                "to_if_alone": [{ "key_code": "spacebar" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Hyper Key: Space/Backspace (held down) → Hyper (⌃⇧⌥⌘)",
-                        "manipulators": [
-                            {
-                                "from": { "key_code": "spacebar" },
-                                "to_after_key_up": [
-                                    {
-                                        "set_variable": {
-                                            "name": "hyper_if_held_down1",
-                                            "value": 0
-                                        }
-                                    }
-                                ],
-                                "to_if_alone": [{ "key_code": "spacebar" }],
-                                "to_if_held_down": [
-                                    {
-                                        "set_variable": {
-                                            "name": "hyper_if_held_down2",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "key_code": "left_control",
-                                        "modifiers": ["left_command", "left_shift", "left_option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": { "key_code": "delete_or_backspace" },
-                                "to_after_key_up": [
-                                    {
-                                        "set_variable": {
-                                            "name": "hyper_if_held_down2",
-                                            "value": 0
-                                        }
-                                    }
-                                ],
-                                "to_if_alone": [{ "key_code": "delete_or_backspace" }],
-                                "to_if_held_down": [
-                                    {
-                                        "set_variable": {
-                                            "name": "hyper_if_held_down2",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "key_code": "left_control",
-                                        "modifiers": ["left_command", "left_shift", "left_option"]
+                                        "key_code": "m",
+                                        "modifiers": ["command", "control", "option", "shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -2591,6 +2446,10 @@
                         {
                             "from": { "key_code": "f21" },
                             "to": [{ "key_code": "escape" }]
+                        },
+                        {
+                            "from": { "key_code": "f22" },
+                            "to": [{ "key_code": "vk_none" }]
                         },
                         {
                             "from": { "key_code": "f23" },
@@ -4494,46 +4353,6 @@
                         ]
                     },
                     {
-                        "description": "f18 CAWX",
-                        "enabled": false,
-                        "manipulators": [
-                            {
-                                "description": "f18 CAWX",
-                                "from": {
-                                    "key_code": "f18",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_control",
-                                        "modifiers": ["left_option", "left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "f19 CAWS",
-                        "enabled": false,
-                        "manipulators": [
-                            {
-                                "description": "f19 CAWS",
-                                "from": {
-                                    "key_code": "f19",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_control",
-                                        "modifiers": ["left_option", "left_command", "left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "f24 shift-fn",
                         "manipulators": [
                             {
@@ -5069,59 +4888,6 @@
                                 "type": "basic"
                             }
                         ]
-                    },
-                    {
-                        "description": "cmd-tab is cmd-opt-tab (because task switching sucks)",
-                        "enabled": false,
-                        "manipulators": [
-                            {
-                                "description": "needed for alt-tab",
-                                "from": {
-                                    "key_code": "tab",
-                                    "modifiers": { "mandatory": ["right_command"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": ["right_command", "right_option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "needed for alt-tab",
-                                "from": {
-                                    "key_code": "tab",
-                                    "modifiers": { "mandatory": ["command", "shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": ["right_command", "right_option", "shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "print_screen toggle mouse highlight",
-                        "manipulators": [
-                            {
-                                "description": "print_screen",
-                                "from": {
-                                    "key_code": "print_screen",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "j",
-                                        "modifiers": ["left_command", "left_control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
                     }
                 ]
             },
@@ -5140,6 +4906,10 @@
                         {
                             "from": { "key_code": "f21" },
                             "to": [{ "key_code": "escape" }]
+                        },
+                        {
+                            "from": { "key_code": "f22" },
+                            "to": [{ "key_code": "vk_none" }]
                         },
                         {
                             "from": { "key_code": "f23" },
