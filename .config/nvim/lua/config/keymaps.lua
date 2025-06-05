@@ -270,6 +270,9 @@ keymap('n', "<leader>TT",
     require("toggleterm").toggle(1, 100, vim.loop.cwd(), "tab")
   end, { desc = "ToggleTerm (tab cwd_dir)" })
 
+--  for anki
+keymap('v', '<leader>cc', 'c{{c1::<C-r>"}}<Esc>', { noremap = true, desc = 'Wrap visual selection with {{c1::}}' })
+
 
 keymap(
   "t",
