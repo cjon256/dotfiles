@@ -74,8 +74,10 @@ path=(
   /usr/local/{,s}bin(N)
   /run/current-system/sw/{,s}bin(N)
   $path
+  $HOME/.rustup/toolchains/stable-aarch64-apple-darwin/bin
   $GOPATH/bin
   $GOROOT/bin
+
 )
 fpath+=(/opt/homebrew/share/zsh/site-functions)
 
