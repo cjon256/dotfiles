@@ -19,9 +19,14 @@ theme = MaterialOcean
 font-family = 0xProto Nerd Font Mono
 font-size = 20
 
-keybind = cmd+m=unbind
-keybind = cmd+t=unbind
-keybind = cmd+n=unbind
+keybind = super+n=new_window
+keybind = super+a=select_all
+keybind = super+c=copy_to_clipboard
+keybind = super+r=reload_config
+keybind = super+v=paste_from_clipboard
+
+keybind = super+m=unbind
+keybind = super+t=unbind
 keybind = super+alt+shift+j=unbind
 keybind = super+alt+shift+w=unbind
 keybind = super+alt+i=unbind
@@ -47,15 +52,11 @@ keybind = super+shift+up=unbind
 keybind = super+shift+down=unbind
 keybind = super+shift+enter=unbind
 keybind = ctrl+shift+tab=unbind
-keybind = super+a=select_all
-keybind = super+c=copy_to_clipboard
 keybind = super+d=unbind
 keybind = super+k=unbind
 keybind = super+m=unbind
 keybind = super+n=unbind
 keybind = super+q=unbind
-keybind = super+r=reload_config
-keybind = super+v=paste_from_clipboard
 keybind = super+w=unbind
 keybind = super+zero=unbind
 keybind = super+physical:one=unbind
