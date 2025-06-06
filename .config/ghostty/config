@@ -15,8 +15,9 @@ window-save-state = always
 
 theme = MaterialOcean
 
-font-family = Inconsolata LGC Nerd Font Mono
-font-size = 15.5
+# font-family = Inconsolata LGC Nerd Font Mono
+font-family = 0xProto Nerd Font Mono
+font-size = 20
 
 keybind = cmd+m=unbind
 keybind = cmd+t=unbind
