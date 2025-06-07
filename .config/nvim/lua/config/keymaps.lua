@@ -306,7 +306,7 @@ keymap("n", "<leader>oo", "<CMD>Oil<CR>", { desc = "Open oil" })
 
 -- ThePrimeagen greatest hits
 -- greatest remap ever
-keymap("x", "<leader>p", [["_dP]], { desc = "Paste over selection" })
+keymap("x", "<leader>P", [["_dP]], { desc = "Paste over selection" })
 
 -- next greatest remap ever : asbjornHaland
 keymap({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to clipboard" })
