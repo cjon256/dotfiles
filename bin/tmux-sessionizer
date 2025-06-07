@@ -6,7 +6,8 @@ else
   selected=$(
     (
       echo "ssh:" &&
-        find ~/Projects/* ~/Projects/codecrafters/** ~/Projects/Exercism/** ~ ~/.config/** ~/.local/share/chezmoi/** ~/src ~/go/src -mindepth 0 -maxdepth 1 -type d
+        find ~/Projects ~/Projects/[A-Z]* ~/Projects/codecrafters/** ~/Projects/Exercism/** ~ ~/.config/** ~/.local/share/chezmoi/** ~/src/* -mindepth 0 -maxdepth 1 -type d &&
+        find ~/src/* -mindepth 0 -maxdepth 1 -type l -exec test -d {} \; -print
     ) | fzf
   )
 fi
