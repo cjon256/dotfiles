@@ -2,6 +2,7 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 local o = vim.opt
+local g = vim.g
 
 -- slightly nicer whitespace display
 o.listchars = "eol:¬,tab:▸ ,space:·,trail:~,nbsp:␣,extends:❯,precedes:❮"
@@ -52,3 +53,13 @@ vim.cmd("au TextYankPost * silent! lua vim.highlight.on_yank()")
 
 -- needed only if I end up using test again
 -- vim.cmd [[let test#strategy = "toggleterm"]]
+
+-- Better root dir detection
+g.root_spec = {
+  "lsp",
+  { ".git", "lua", ".obsidian", "package.json", "Makefile", "go.mod", "cargo.toml", "pyproject.toml", "src" },
+  "cwd",
+}
+
+-- hide command line except when using
+o.cmdheight = 0
