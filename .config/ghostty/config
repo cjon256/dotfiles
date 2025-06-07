@@ -17,13 +17,14 @@ theme = MaterialOcean
 
 # font-family = Inconsolata LGC Nerd Font Mono
 font-family = 0xProto Nerd Font Mono
-font-size = 20
+font-size = 16
 
 keybind = super+n=new_window
 keybind = super+a=select_all
 keybind = super+c=copy_to_clipboard
 keybind = super+r=reload_config
 keybind = super+v=paste_from_clipboard
+keybind = super+q=quit
 
 keybind = super+m=unbind
 keybind = super+t=unbind
@@ -55,8 +56,6 @@ keybind = ctrl+shift+tab=unbind
 keybind = super+d=unbind
 keybind = super+k=unbind
 keybind = super+m=unbind
-keybind = super+n=unbind
-keybind = super+q=unbind
 keybind = super+w=unbind
 keybind = super+zero=unbind
 keybind = super+physical:one=unbind
