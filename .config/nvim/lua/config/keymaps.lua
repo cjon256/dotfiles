@@ -392,3 +392,14 @@ if vim.g.neovide then
   vim.o.guifont = "Menlo:h19"
   vim.opt.wrap = true
 end
+
+vim.api.nvim_create_autocmd("RecordingEnter", {
+  callback = function()
+    vim.opt.cmdheight = 1
+  end,
+})
+vim.api.nvim_create_autocmd("RecordingLeave", {
+  callback = function()
+    vim.opt.cmdheight = 0
+  end,
+})
