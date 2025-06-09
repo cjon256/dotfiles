@@ -8,6 +8,156 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Fix the W key",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "f17",
+                                    "modifiers": { "mandatory": ["control", "option", "shift", "command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "end",
+                                        "modifiers": ["option", "command", "shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f17",
+                                    "modifiers": { "optional": ["command", "control", "option"] }
+                                },
+                                "to": [{ "key_code": "comma" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f17",
+                                    "modifiers": { "optional": ["command", "option", "shift"] }
+                                },
+                                "to": [{ "key_code": "comma" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f17",
+                                    "modifiers": { "optional": ["control", "option", "shift"] }
+                                },
+                                "to": [{ "key_code": "comma" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f17",
+                                    "modifiers": { "optional": ["command", "control", "shift"] }
+                                },
+                                "to": [{ "key_code": "comma" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Fix the V key",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "f18",
+                                    "modifiers": { "mandatory": ["control", "option", "shift", "command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "end",
+                                        "modifiers": ["control", "command", "shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f18",
+                                    "modifiers": { "optional": ["command", "control", "option"] }
+                                },
+                                "to": [{ "key_code": "period" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f18",
+                                    "modifiers": { "optional": ["command", "option", "shift"] }
+                                },
+                                "to": [{ "key_code": "period" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f18",
+                                    "modifiers": { "optional": ["control", "option", "shift"] }
+                                },
+                                "to": [{ "key_code": "period" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f18",
+                                    "modifiers": { "optional": ["command", "control", "shift"] }
+                                },
+                                "to": [{ "key_code": "period" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Fix the Z key",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "f19",
+                                    "modifiers": { "mandatory": ["control", "option", "shift", "command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "end",
+                                        "modifiers": ["control", "option", "command", "shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f19",
+                                    "modifiers": { "optional": ["command", "control", "option"] }
+                                },
+                                "to": [{ "key_code": "slash" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f19",
+                                    "modifiers": { "optional": ["command", "option", "shift"] }
+                                },
+                                "to": [{ "key_code": "slash" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f19",
+                                    "modifiers": { "optional": ["control", "option", "shift"] }
+                                },
+                                "to": [{ "key_code": "slash" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f19",
+                                    "modifiers": { "optional": ["command", "control", "shift"] }
+                                },
+                                "to": [{ "key_code": "slash" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "This seems to do nothing, but delete works properly with it...",
                         "manipulators": [
                             {
@@ -2148,25 +2298,9 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "comma",
+                                    "key_code": "f17",
                                     "modifiers": {
                                         "mandatory": ["fn"],
-                                        "optional": ["control", "command", "option"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "grave_accent_and_tilde",
-                                        "modifiers": ["shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "comma",
-                                    "modifiers": {
-                                        "mandatory": ["fn", "shift"],
                                         "optional": ["control", "command", "option"]
                                     }
                                 },
@@ -2175,7 +2309,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "period",
+                                    "key_code": "f18",
                                     "modifiers": {
                                         "mandatory": ["fn"],
                                         "optional": ["shift", "control", "command", "option"]
@@ -2186,7 +2320,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "slash",
+                                    "key_code": "f19",
                                     "modifiers": {
                                         "mandatory": ["fn"],
                                         "optional": ["shift", "control", "command", "option"]
@@ -2471,11 +2605,11 @@
                         },
                         {
                             "from": { "key_code": "f22" },
-                            "to": [{ "key_code": "vk_none" }]
+                            "to": [{ "key_code": "escape" }]
                         },
                         {
                             "from": { "key_code": "f23" },
-                            "to": [{ "key_code": "vk_none" }]
+                            "to": [{ "key_code": "escape" }]
                         }
                     ]
                 },
