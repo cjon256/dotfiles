@@ -389,4 +389,6 @@ if vim.g.neovide then
   vim.keymap.set('v', '<D-v>', '"+P') -- Paste visual mode
   vim.keymap.set('c', '<D-v>', '<C-R>+') -- Paste command mode
   vim.keymap.set('i', '<D-v>', '<C-O>"+P<CR>') -- Paste insert mode
+  vim.o.guifont = "Menlo:h19"
+  vim.opt.wrap = true
 end
