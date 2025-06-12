@@ -7396,7 +7396,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "period",
+                                    "key_code": "comma",
                                     "modifiers": {
                                         "mandatory": ["fn"],
                                         "optional": ["control", "command", "option", "shift"]
@@ -7407,7 +7407,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "comma",
+                                    "key_code": "period",
                                     "modifiers": {
                                         "mandatory": ["fn"],
                                         "optional": ["shift", "control", "command", "option"]
@@ -7677,6 +7677,25 @@
                                     {
                                         "key_code": "m",
                                         "modifiers": ["command", "control", "option", "shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "CapsLock to Hyper/Escape",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_control",
+                                        "lazy": true,
+                                        "modifiers": ["right_command", "right_option"]
                                     }
                                 ],
                                 "type": "basic"
