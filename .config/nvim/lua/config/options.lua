@@ -57,7 +57,7 @@ vim.cmd("au TextYankPost * silent! lua vim.highlight.on_yank()")
 -- Better root dir detection
 g.root_spec = {
   "lsp",
-  { ".git", "lua", ".obsidian", "package.json", "Makefile", "go.mod", "cargo.toml", "pyproject.toml", "src" },
+  { ".git", "lua", ".obsidian", "package.json", "Makefile", "go.mod", "cargo.toml", "pyproject.toml", "src", ".config" },
   "cwd",
 }
 
