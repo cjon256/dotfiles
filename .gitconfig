@@ -9,8 +9,10 @@
     email = "3659487+cjon256@users.noreply.github.com"
 
 [alias]
+    ap = add --interactive --patch
     br = branch
     ci = commit
+    cv = commit -v
     co = checkout
     st = status
     ut = ls-files --others --exclude-standard
