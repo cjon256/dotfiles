@@ -2601,7 +2601,7 @@
                         },
                         {
                             "from": { "key_code": "f21" },
-                            "to": [{ "key_code": "escape" }]
+                            "to": [{ "key_code": "vk_none" }]
                         },
                         {
                             "from": { "key_code": "f22" },
@@ -2609,7 +2609,7 @@
                         },
                         {
                             "from": { "key_code": "f23" },
-                            "to": [{ "key_code": "escape" }]
+                            "to": [{ "key_code": "vk_none" }]
                         }
                     ]
                 },
