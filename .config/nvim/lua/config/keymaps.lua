@@ -235,7 +235,7 @@ keymap("n", "<leader>so", ":SymbolsOutline<CR>", { desc = "Toggle symbols outlin
 -- keymap("n", "<leader>tt", "<CMD>lua require('toggleterm').toggle(1, 15, vim.loop.cwd(), 'horizontal')<CR>", { desc = "Toggle terminal horizontal" })
 keymap('n', "<C-h><C-h>", function()
     local count = vim.v.count1
-    require("toggleterm").toggle(count, 70, vim.loop.cwd(), "float")
+    require("toggleterm").toggle(count, 70, vim.fn.getcwd(), "float")
   end, { desc = "ToggleTerm (float)" })
 keymap("n", "<C-t><C-t>", "<CMD>lua require('toggleterm').toggle(11, vim.o.columns * 0.4, vim.loop.cwd(), 'vertical')<CR>", { desc = "Toggle terminal vertical" })
 keymap("n", "<C-n><C-n>", "<CMD>lua require('toggleterm').toggle(12, 15, vim.loop.cwd(), 'horizontal')<CR>", { desc = "Toggle terminal horizontal" })
@@ -267,8 +267,8 @@ keymap('n', "<leader>Tt", function()
   end, { desc = "ToggleTerm (tab root_dir)" })
 keymap('n', "<leader>TT",
   function()
-    require("toggleterm").toggle(1, 100, vim.loop.cwd(), "tab")
-  end, { desc = "ToggleTerm (tab cwd_dir)" })
+    require("toggleterm").toggle(1, 100, vim.fn.getcwd(), "tab")
+ end, { desc = "ToggleTerm (tab cwd_dir)" })
 
 --  for anki
 keymap('v', '<leader>cc', 'c{{c1::<C-r>"}}<Esc>', { noremap = true, desc = 'Wrap visual selection with {{c1::}}' })
