@@ -1,5 +1,21 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
+local mux = wezterm.mux
+
+wezterm.on("gui-startup", function()
+	local _, _, window = mux.spawn_window({})
+	window:gui_window():maximize()
+end)
+
+wezterm.on("gui-attached", function(_)
+	-- maximize all displayed windows on startup
+	local workspace = mux.get_active_workspace()
+	for _, window in ipairs(mux.all_windows()) do
+		if window:get_workspace() == workspace then
+			window:gui_window():maximize()
+		end
+	end
+end)
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
@@ -10,9 +26,6 @@ local config = wezterm.config_builder()
 config.color_scheme = "Night Owl (Gogh)"
 config.font = wezterm.font("Inconsolata LGC Nerd Font Mono")
 config.font_size = 15.5
-
-config.initial_rows = 71
-config.initial_cols = 315
 
 config.enable_tab_bar = false
 
