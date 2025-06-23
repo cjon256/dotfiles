@@ -8,6 +8,24 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Ctrl+Backspace -> Opt-Backspace",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "delete_or_backspace",
+                                    "modifiers": { "mandatory": ["control"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace",
+                                        "modifiers": ["option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Fix the W key",
                         "manipulators": [
                             {
