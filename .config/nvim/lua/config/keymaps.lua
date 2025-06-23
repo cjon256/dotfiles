@@ -116,10 +116,15 @@ end, { desc = "Format" })
 
 -- diagnostic
 local diagnostic_goto = function(next, severity)
-  local go = next and vim.diagnostic.goto_next or vim.diagnostic.goto_prev
-  severity = severity and vim.diagnostic.severity[severity] or nil
+  -- dir is -1 if next is false, 1 if next is true
+  local dir = next and 1 or -1
+  local opts = {
+    count = dir,
+    severity = severity and vim.diagnostic.severity[severity] or nil,
+  }
+
   return function()
-    go({ severity = severity })
+    vim.diagnostic.jump(opts)
   end
 end
 keymap("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
