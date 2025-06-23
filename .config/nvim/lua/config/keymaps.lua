@@ -106,6 +106,9 @@ keymap("n", "[q", vim.cmd.cprev, { desc = "Previous Quickfix" })
 keymap("n", "]q", vim.cmd.cnext, { desc = "Next Quickfix" })
 keymap("n", "<leader>nq", vim.cmd.cnext, { desc = "Next Quickfix" })
 
+-- fix meta-backspace to backward-kill-word
+-- keymap("i", "<M-BS>", "<C-o>dB", { desc = "Meta Backspace (kill word)" })
+keymap("i", "<M-BS>", "<C-\\><C-g>vBd", { desc = "Meta Backspace (kell word)" })
 -- formatting
 keymap({ "n", "v" }, "<leader>cf", function()
   LazyVim.format({ force = true })
