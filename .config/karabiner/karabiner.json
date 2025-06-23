@@ -2628,6 +2628,10 @@
                         {
                             "from": { "key_code": "f23" },
                             "to": [{ "key_code": "vk_none" }]
+                        },
+                        {
+                            "from": { "key_code": "f24" },
+                            "to": [{ "key_code": "vk_none" }]
                         }
                     ]
                 },
