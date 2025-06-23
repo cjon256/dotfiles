@@ -138,6 +138,8 @@ function zvm_after_init() {
   bindkey '^n' history-search-forward
   bindkey '^[w' kill-region
   bindkey -M viins "^Y" autosuggest-accept
+  # alt+backspace to delete the previous word
+  bindkey '^[^?' backward-kill-word
 }
 
 ################################################################################
