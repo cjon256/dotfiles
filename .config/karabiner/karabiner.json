@@ -2066,6 +2066,7 @@
                     },
                     {
                         "description": "f24 shift-fn",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "description": "24 shift-fn",
