@@ -2089,6 +2089,22 @@
                         "manipulators": [
                             {
                                 "from": {
+                                    "key_code": "z",
+                                    "modifiers": {
+                                        "mandatory": ["fn"],
+                                        "optional": ["shift", "control", "command", "option"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "open_bracket",
+                                        "modifiers": ["shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
                                     "key_code": "y",
                                     "modifiers": {
                                         "mandatory": ["fn"],
