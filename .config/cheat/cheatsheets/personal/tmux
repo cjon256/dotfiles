@@ -5,6 +5,12 @@ ESSENTIAL SETUP if on remote system with no config
 :setw -g mode-keys vi
 
 ####################################################################################################
+# TPM (least used, most easily forgotten)
+Ctrl-b I       # install plugins
+Ctrl-b U       # update plugins
+Ctrl-b alt-u   # remove/uninstall plugins not on the plugin list
+
+####################################################################################################
 # GENERAL KEYS
 Ctrl-b Ctrl-r  # reload tmux config (also C-r)
 Ctrl-b :       # command prompt
