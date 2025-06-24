@@ -1,0 +1,11 @@
+[cursor.style]
+shape = "Block"
+
+[font]
+size = 14
+
+[font.normal]
+family = "JetBrainsMonoNL Nerd Font Mono"
+
+[window]
+startup_mode = "SimpleFullscreen"
