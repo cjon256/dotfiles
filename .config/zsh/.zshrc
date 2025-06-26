@@ -62,6 +62,30 @@ function ipinfo() { curl "https://ipinfo.io/$1" ; }
 function whatsmyip() { dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}' ; }
 function mc() { mkdir -p -- "$1" && cd -P -- "$1" ; }
 
+# cute function to make stuff Title Case
+function titlecase() {
+   ((CHR_PTR=0))
+   set ${*,,}
+   for f in ${*} ; do
+      case $f in
+         ebay) c+="eBay " ;;
+         mcdonalds|"mcdonald's") c+="McDonald's " ;;
+         vs) c+="vs. " ;;
+         a|about|and|but|by|for|in|is|of|or|the|to) \
+             [ "$CHR_PTR" -eq "0" ] && {
+                c+="${f^} "
+             } || {
+                c+="$f "
+             } ;;
+         bbq|diy|hdtv|hf|kfc|mdf|sdtv|shf|tv|uhf|vlf|vhf) c+="${f^^} " ;;
+         *) c+="${f^} " ;;
+      esac
+      ((CHR_PTR++))
+   done
+   x=${c## } ; c=${x%% }
+   echo "$c"
+}
+
 ################################################################################
 # Options
 
