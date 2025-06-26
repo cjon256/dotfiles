@@ -1,4 +1,27 @@
 
+## Actually using mini.surround via lazyvim, so 
+
+gsa - add quotes (with direction or visual mode)
+gsd - delete surrounding
+gsr
+gs
+
+"Hello world!" is not used here
+"Hello world!" is not used here
+"Hello world!" is not used here
+"Hello world!" is not used here
+"Hello world!" is 'not used here'
+
+{
+  function() {
+    for thing > 0 {
+      
+    }
+  }
+}
+
+
+
 surround.vim
 Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tags, and more. The plugin
 provides mappings to easily delete, change and add such surroundings in pairs.
