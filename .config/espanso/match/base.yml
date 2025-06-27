@@ -144,18 +144,33 @@ matches:
     replace: "␣"
 
   - replace: "😂"
-    trigger: ":::"
+    triggers: [":::", ":joy"]
+    label: "joy 😂"
+
   - replace: "😅"
     trigger: ":::"
+    label: "worried 😅"
+
   - replace: "🤣"
-    trigger: ":::"
+    triggers: [":::", ":lol"]
+    label: "lol 🤣"
+
   - replace: "👍"
-    trigger: ":::"
+    triggers: [":::", ":thup"]
+    label: "thup 👍"
+
   - replace: "🤔️"
-    trigger: ":::"
+    triggers: [":::", ":think"]
+    label: "think 🤔️"
+
   - replace: "😭️"
-    trigger: ":::"
+    triggers: [":::", ":sob"]
+    label: "sob 😭️"
+
   - replace: "🥰️"
-    trigger: ":::"
+    triggers: [":::", ":luv"]
+    label: "luv 🥰️"
+
   - replace: "😜️"
-    trigger: ":::"
+    triggers: [":::", ":nyah"]
+    label: "nyah 😜️"
