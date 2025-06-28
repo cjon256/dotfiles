@@ -145,32 +145,32 @@ matches:
 
   - replace: "😂"
     triggers: [":::", ":joy"]
-    label: "joy 😂"
+    label: ":joy 😂"
 
   - replace: "😅"
-    trigger: ":::"
-    label: "worried 😅"
+    triggers: [":::", ":umm"]
+    label: ":umm 😅"
 
   - replace: "🤣"
     triggers: [":::", ":lol"]
-    label: "lol 🤣"
+    label: ":lol 🤣"
 
   - replace: "👍"
     triggers: [":::", ":thup"]
-    label: "thup 👍"
+    label: ":thup 👍"
 
   - replace: "🤔️"
     triggers: [":::", ":think"]
-    label: "think 🤔️"
+    label: ":think 🤔️"
 
   - replace: "😭️"
     triggers: [":::", ":sob"]
-    label: "sob 😭️"
+    label: ":sob 😭️"
 
   - replace: "🥰️"
     triggers: [":::", ":luv"]
-    label: "luv 🥰️"
+    label: ":luv 🥰️"
 
   - replace: "😜️"
     triggers: [":::", ":nyah"]
-    label: "nyah 😜️"
+    label: ":nyah 😜️"
