@@ -168,3 +168,7 @@ matches:
   - replace: "😜️"
     triggers: [":::", ":nyah"]
     label: ":nyah 😜️"
+
+  - replace: "🤯"
+    triggers: [":::", ":boom"]
+    label: ":boom"
