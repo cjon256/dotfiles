@@ -1,4 +1,20 @@
 ################################################################################
+# Shell integrations
+if [[ -f "/opt/homebrew/bin/brew" ]] then
+  # If you're using macOS, you'll want this enabled
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# Autoenv
+AUTOENV=/opt/homebrew/opt/autoenv/activate.sh
+if [[ -f $AUTOENV ]]; then
+  source $AUTOENV
+fi
+
+eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
+
+################################################################################
 # Functions
 
 # command to make git a bit shorter since it gets used so much...
@@ -117,16 +133,6 @@ if [[ -f /Users/cjon/.config/zsh/.zsh_kubectl ]]; then
 fi
 
 ################################################################################
-# Shell integrations
-if [[ -f "/opt/homebrew/bin/brew" ]] then
-  # If you're using macOS, you'll want this enabled
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-
-eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
-
-################################################################################
 # Zinit
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -199,7 +205,8 @@ _comp_options+=(globdots)
 
 #### <---
 
-zinit cdreplay -q
+# I found this useless with zoxide
+# zinit cdreplay -q
 
 complete -C aws_completer aws
 compdef _my_aws=aws
@@ -273,13 +280,6 @@ setopt appendhistory
 
 setopt HIST_FIND_NO_DUPS
 setopt INC_APPEND_HISTORY
-
-################################################################################
-# Autoenv
-AUTOENV=/opt/homebrew/opt/autoenv/activate.sh
-if [[ -f $AUTOENV ]]; then
-  source $AUTOENV
-fi
 
 ################################################################################
 # Task managers
