@@ -1,0 +1,95 @@
+tap "dsully/tap"
+tap "espanso/espanso"
+tap "nikitabobko/tap"
+brew "autoenv"
+brew "readline"
+brew "awscli"
+brew "cheat"
+brew "chezmoi"
+brew "diff-so-fancy"
+brew "dstask"
+brew "fd"
+brew "fzf"
+brew "gawk"
+brew "go"
+brew "htop"
+brew "hugo"
+brew "luajit"
+brew "luarocks"
+brew "mactop"
+brew "node"
+brew "mailsy"
+brew "mas"
+brew "neovim"
+brew "neovide"
+brew "pstree"
+brew "pyenv"
+brew "ripgrep"
+brew "rustup"
+brew "showkey"
+brew "sipcalc"
+brew "starship"
+brew "taskell"
+brew "telnet"
+brew "tldr"
+brew "tmux"
+brew "tree"
+brew "yadm"
+brew "zoxide"
+brew "zsh-autocomplete"
+brew "zsh-autosuggestions"
+brew "zsh-completions"
+brew "zsh-syntax-highlighting"
+brew "zsh-vi-mode"
+brew "dsully/tap/macos-defaults"
+cask "1password"
+cask "1password-cli"
+cask "alacritty"
+cask "alfred"
+cask "anki"
+cask "appcleaner"
+cask "balenaetcher"
+cask "bbedit"
+cask "bunch"
+cask "drawio"
+cask "espanso"
+cask "firefox@developer-edition"
+cask "font-0xproto-nerd-font"
+cask "font-inconsolata-go-nerd-font"
+cask "font-inconsolata-lgc-nerd-font"
+cask "ghostty"
+cask "google-chrome"
+cask "homerow"
+cask "iterm2"
+cask "jordanbaird-ice"
+cask "karabiner-elements"
+cask "kitty"
+cask "notion"
+cask "obsidian"
+cask "swiftdefaultappsprefpane"
+cask "visual-studio-code"
+cask "vivaldi"
+cask "wezterm"
+cask "wireshark-app"
+cask "zotero"
+mas "1Blocker", id: 1365531024
+mas "1Password for Safari", id: 1569813296
+mas "AdBlock Pro", id: 1018301773
+mas "Agenda", id: 1287445660
+mas "Amphetamine", id: 937984704
+mas "Cursor Highlighter", id: 1576720712
+mas "Drafts", id: 1435957248
+mas "GarageBand", id: 682658836
+mas "GrandPerspective", id: 1111570163
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Peek", id: 1554235898
+mas "Pixelmator Pro", id: 1289583905
+mas "Pure Paste", id: 1611378436
+mas "Save to Raindrop.io", id: 1549370672
+mas "Slack", id: 803453959
+mas "Things", id: 904280696
+mas "Velja", id: 1607635845
+mas "Xcode", id: 497799835
