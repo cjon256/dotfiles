@@ -411,3 +411,17 @@ vim.api.nvim_create_autocmd("RecordingLeave", {
     vim.opt.cmdheight = 0
   end,
 })
+
+keymap(
+	"n",
+	"<leader>sE",
+	function() require("scissors").editSnippet() end,
+	{ desc = "Snippet: Edit" }
+)
+-- when used in visual mode, prefills the selection as snippet body
+keymap(
+	{ "n", "x" },
+	"<leader>sA",
+	function() require("scissors").addNewSnippet() end,
+	{ desc = "Snippet: Add" }
+)
