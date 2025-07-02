@@ -13,7 +13,8 @@ size = 16
 hide_when_typing = true
 
 [font.normal]
-family = "0xProto Nerd Font Mono"
+family = "BlexMono Nerd Font"
+# family = "0xProto Nerd Font Mono"
 
 
 [window]
