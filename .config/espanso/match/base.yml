@@ -137,6 +137,9 @@ matches:
   - trigger: ";space"
     replace: "␣"
 
+  - trigger: '"=='
+    replace: "!="
+
   - replace: "😂"
     triggers: [":::", ":joy"]
     label: ":joy 😂"
