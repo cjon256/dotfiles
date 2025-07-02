@@ -175,3 +175,15 @@ matches:
   - replace: "🤯"
     triggers: [":::", ":boom"]
     label: ":boom"
+
+  - replace: "📅"
+    triggers: [":tasks", ":due"]
+    label: ":due"
+
+  - replace: "⏳"
+    triggers: [":tasks", ":sched"]
+    label: ":sched"
+
+  - replace: "🛫"
+    triggers: [":tasks", ":start"]
+    label: ":start"
