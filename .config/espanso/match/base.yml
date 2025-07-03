@@ -176,6 +176,10 @@ matches:
     triggers: [":::", ":boom"]
     label: ":boom"
 
+  - replace: "➕"
+    triggers: [":tasks", ":add"]
+    label: ":add"
+
   - replace: "📅"
     triggers: [":tasks", ":due"]
     label: ":due"
