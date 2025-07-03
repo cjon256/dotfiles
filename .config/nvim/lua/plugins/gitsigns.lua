@@ -2,14 +2,6 @@ return {
   "lewis6991/gitsigns.nvim",
   dependencies = {
     { "nvim-lua/plenary.nvim", lazy = true },
-    {
-      -- XXX unfortunately, this interferes with gitsigns...
-      "purarue/gitsigns-yadm.nvim",
-      lazy = true,
-      opts = {
-        shell_timeout_ms = 1000,
-      },
-    },
   },
   event = { "BufReadPre", "BufNewFile" },
   opts = {
