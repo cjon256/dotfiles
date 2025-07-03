@@ -2065,21 +2065,20 @@
                         ]
                     },
                     {
-                        "description": "f24 shift-fn",
-                        "enabled": false,
+                        "description": "f22 hyper/esc",
                         "manipulators": [
                             {
-                                "description": "24 shift-fn",
                                 "from": {
-                                    "key_code": "f24",
-                                    "modifiers": { "optional": ["any"] }
+                                    "key_code": "f22",
+                                    "modifiers": { "optional": ["shift"] }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "fn",
-                                        "modifiers": ["left_shift"]
+                                        "key_code": "left_command",
+                                        "modifiers": ["left_option", "left_control"]
                                     }
                                 ],
+                                "to_if_alone": [{ "key_code": "escape" }],
                                 "type": "basic"
                             }
                         ]
@@ -2639,15 +2638,7 @@
                             "to": [{ "key_code": "vk_none" }]
                         },
                         {
-                            "from": { "key_code": "f22" },
-                            "to": [{ "key_code": "escape" }]
-                        },
-                        {
                             "from": { "key_code": "f23" },
-                            "to": [{ "key_code": "vk_none" }]
-                        },
-                        {
-                            "from": { "key_code": "f24" },
                             "to": [{ "key_code": "vk_none" }]
                         }
                     ]
