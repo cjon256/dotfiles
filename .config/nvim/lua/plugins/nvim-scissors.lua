@@ -3,5 +3,10 @@ return {
   dependencies = "nvim-telescope/telescope.nvim", -- if using telescope
   opts = {
     snippetDir = vim.fn.stdpath("config") .. "/snippets",
+    editSnippetPopup = {
+      keymaps = {
+        deleteSnippet = "<M-BS>",
+      },
+    },
   },
 }
