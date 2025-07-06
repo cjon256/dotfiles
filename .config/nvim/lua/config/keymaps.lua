@@ -425,3 +425,7 @@ keymap(
 	function() require("scissors").addNewSnippet() end,
 	{ desc = "Snippet: Add" }
 )
+
+-- this seems to bea the easiest way to disable the default LazyVim keymap
+-- it is bound to telescope's file finder, but I use <leader>ff for that...
+vim.keymap.del('n', '<leader><space>', {})
