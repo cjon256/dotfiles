@@ -19,7 +19,7 @@ return {
     -- See the full "keymap" documentation for information on defining your own keymap.
     keymap = {
       preset = "none",
-      ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
+      ["<C-k>"] = { "show", "show_documentation", "hide_documentation" },
       ["<C-e>"] = { "hide", "fallback" },
 
       -- ["<Tab>"] = { "select_and_accept", "fallback" },
