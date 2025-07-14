@@ -2673,6 +2673,62 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Change double tap tab key to ⌘tab",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "tab pressed",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "tab" },
+                                "to": [
+                                    {
+                                        "key_code": "tab",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "tab pressed",
+                                            "value": 1
+                                        }
+                                    },
+                                    { "key_code": "tab" }
+                                ],
+                                "to_delayed_action": {
+                                    "to_if_canceled": [
+                                        {
+                                            "set_variable": {
+                                                "name": "tab pressed",
+                                                "value": 0
+                                            }
+                                        }
+                                    ],
+                                    "to_if_invoked": [
+                                        {
+                                            "set_variable": {
+                                                "name": "tab pressed",
+                                                "value": 0
+                                            }
+                                        }
+                                    ]
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Fix the W key",
                         "enabled": false,
                         "manipulators": [
