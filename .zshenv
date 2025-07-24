@@ -68,17 +68,7 @@ if command -v brew >/dev/null 2>&1; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# Set the list of directories that Zsh searches for programs. $PATH
-path=(
-  $HOME/{,s}bin(N)
-  /usr/local/{,s}bin(N)
-  /run/current-system/sw/{,s}bin(N)
-  $path
-  $HOME/.rustup/toolchains/stable-aarch64-apple-darwin/bin
-  $GOPATH/bin
-  $GOROOT/bin
-
-)
+# Set the list of directories that Zsh searches for completions
 fpath+=(/opt/homebrew/share/zsh/site-functions)
 
 # Ensure path arrays do not contain duplicates.
