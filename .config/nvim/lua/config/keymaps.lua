@@ -224,7 +224,7 @@ keymap("n", "<leader>ww", ":w<CR>", { desc = "Write file" })
 keymap("n", "<leader>wa", ":wa<CR>", { desc = "Write all files" })
 keymap("n", "<leader>wz", ":wqa<CR>", { desc = "Write quit all" })
 keymap("n", "<leader>qq", ":q<CR>", { desc = "Quit (current buffer)" })
-keymap("n", "<leader>aq", ":qa<CR>", { desc = "Quit all" })
+-- keymap("n", "<leader>aq", ":qa<CR>", { desc = "Quit all" })
 keymap("n", "<leader>qa", ":qa<CR>", { desc = "Quit all" })
 
 -- keymap("n", "<leader>bb", ":buffers<CR>:buffer<Space>", { desc = "Switch buffer listing" })
