@@ -203,6 +203,11 @@ _comp_options+=(globdots)
 # zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 # zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+# For ctrl-x ctrl-e
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M viins '^x^e' edit-command-line
+
 #### <---
 
 # I found this useless with zoxide
@@ -256,7 +261,7 @@ alias aws=_my_aws
 
 alias l='ls --color=auto -CF'
 alias la='ls -a --color=auto -CF'
-alias ll="ls -l"
+alias ll="ls -l --color=auto"
 alias llt='tree -C | bat'
 
 unalias run-help
