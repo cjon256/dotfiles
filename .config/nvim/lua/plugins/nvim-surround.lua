@@ -1,7 +1,7 @@
 return {
   {
     -- disable mini.surround, don't need both
-    "echasnovski/mini.surround",
+    "nvim-mini/mini.surround",
     enabled = false,
   },
 
