@@ -1,0 +1,1 @@
+{"dc":{"prefix":"dc","body":"print(\"my silly Doge Coin print\")"},"env":{"body":"#!/usr/bin/env python3","prefix":"env"},"pprint":{"body":"from pprint import pprint as pp","prefix":"pprint"}}
