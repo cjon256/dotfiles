@@ -37,6 +37,8 @@
 #   - trigger: ";hello"
 #     replace: "hi there"
 
+backend: inject
+
 matches:
   - trigger: ";shr"
     replace: "¯\\_(ツ)_/¯"
