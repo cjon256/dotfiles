@@ -13,7 +13,7 @@ window-save-state = always
 # theme = Hurtado
 # theme = Jellybeans
 
-theme = MaterialOcean
+theme = Material Ocean
 
 # font-family = Inconsolata LGC Nerd Font Mono
 font-family = 0xProto Nerd Font Mono
