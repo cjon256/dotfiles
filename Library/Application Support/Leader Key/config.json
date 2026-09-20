@@ -1,0 +1,312 @@
+{
+  "actions" : [
+    {
+      "actions" : [
+        {
+          "actions" : [
+            {
+              "key" : "j",
+              "label" : "50% Split",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=LeftRight"
+            },
+            {
+              "key" : "k",
+              "label" : "Sidebar",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=Sidebar"
+            },
+            {
+              "key" : "l",
+              "label" : "Top Bottom",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=TopBottom"
+            }
+          ],
+          "key" : "j",
+          "label" : "Two Window",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "j",
+              "label" : "Three Equal Panels",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=ThreePanel"
+            },
+            {
+              "key" : "k",
+              "label" : "Three Panels, Major Middle",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=ThreePanelMajor"
+            },
+            {
+              "key" : "l",
+              "label" : "Three Horizontal Bands",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=ThirdsBands"
+            },
+            {
+              "key" : ";",
+              "label" : "SideBar (with two bands on right side)",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=SideBiBar"
+            }
+          ],
+          "key" : "k",
+          "label" : "Three Window",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "j",
+              "label" : "Quarters",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=Quarters"
+            },
+            {
+              "key" : "k",
+              "label" : "SideBar (with three bands on right side)",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=SideTriBar"
+            }
+          ],
+          "key" : "l",
+          "label" : "Four Window",
+          "type" : "group"
+        }
+      ],
+      "key" : "l",
+      "label" : "Layouts",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "e",
+          "type" : "application",
+          "value" : "/Applications/Mail.app"
+        },
+        {
+          "key" : "i",
+          "type" : "application",
+          "value" : "/System/Applications/Music.app"
+        },
+        {
+          "key" : "l",
+          "type" : "url",
+          "value" : "leaderkey://settings"
+        },
+        {
+          "key" : "m",
+          "type" : "application",
+          "value" : "/Applications/Messages.app"
+        },
+        {
+          "key" : "s",
+          "type" : "application",
+          "value" : "/Applications/Safari.app"
+        },
+        {
+          "key" : "t",
+          "label" : "Terminal",
+          "type" : "application",
+          "value" : "/Applications/Ghostty.app"
+        },
+        {
+          "key" : "r",
+          "label" : "Reminders",
+          "type" : "application",
+          "value" : "/System/Applications/Reminders.app"
+        }
+      ],
+      "key" : "o",
+      "label" : "Open",
+      "type" : "group"
+    },
+    {
+      "iconPath" : "wind.snow",
+      "key" : "s",
+      "label" : "Leader Key Settings",
+      "type" : "url",
+      "value" : "leaderkey://settings"
+    },
+    {
+      "actions" : [
+        {
+          "actions" : [
+            {
+              "key" : "h",
+              "label" : "Maximize",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=WholeMax"
+            },
+            {
+              "key" : "j",
+              "label" : "Centered",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=WholeCentered"
+            }
+          ],
+          "key" : "h",
+          "label" : "Whole Screen",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "key" : ";",
+              "label" : "Bottom",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=HalfBottom"
+            },
+            {
+              "key" : "h",
+              "label" : "Left",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=HalfLeft"
+            },
+            {
+              "key" : "j",
+              "label" : "Right",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=HalfRight"
+            },
+            {
+              "key" : "k",
+              "label" : "Middle",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=HalfMiddle"
+            },
+            {
+              "key" : "l",
+              "label" : "Top",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=HalfTop"
+            }
+          ],
+          "key" : "j",
+          "label" : "Halves",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "h",
+              "label" : "Left 1/3",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=OneThirdLeft"
+            },
+            {
+              "key" : "j",
+              "label" : "Middle 1/3",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=OneThirdMiddle"
+            },
+            {
+              "key" : "k",
+              "label" : "Right 1/3",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=OneThirdRight"
+            },
+            {
+              "key" : "l",
+              "label" : "Left 2/3",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=TwoThirdsLeft"
+            },
+            {
+              "key" : ";",
+              "label" : "Right 2/3",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=TwoThirdsRight"
+            }
+          ],
+          "key" : "k",
+          "label" : "Thirds",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "j",
+              "label" : "Left Upper",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=QuarterLeftUpper"
+            },
+            {
+              "key" : "k",
+              "label" : "Right Upper",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=QuarterRightUpper"
+            },
+            {
+              "key" : "l",
+              "label" : "Left Lower",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=QuarterLeftLower"
+            },
+            {
+              "key" : ";",
+              "label" : "Right Lower",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=QuarterRightLower"
+            },
+            {
+              "key" : "u",
+              "label" : "Left Left",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=QuarterLeftLeft"
+            },
+            {
+              "key" : "i",
+              "label" : "Left Middle",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=QuarterLeftMiddle"
+            },
+            {
+              "key" : "o",
+              "label" : "Right Middle",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=QuarterRightMiddle"
+            },
+            {
+              "key" : "p",
+              "label" : "Right Right",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=QuarterRightRight"
+            }
+          ],
+          "key" : "l",
+          "label" : "Quarters",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "j",
+              "label" : "Left",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=ThreeQuartersLeft"
+            },
+            {
+              "key" : "k",
+              "label" : "Right",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=ThreeQuartersRight"
+            }
+          ],
+          "key" : ";",
+          "label" : "Three Quarters",
+          "type" : "group"
+        }
+      ],
+      "key" : "j",
+      "label" : "Window Management",
+      "type" : "group"
+    }
+  ],
+  "type" : "group"
+}
