@@ -299,6 +299,13 @@ if [[ -x `which taskell` ]]; then
   }
 fi
 
+if [[ -o interactive ]] && { [[ -n "$NVIM" ]] || [[ -n "$VIMRUNTIME" ]]; }; then
+  echo "nvim - to toggle terminal <C-t><C-t> or <C-n><C-n> or <C-h><C-h>"
+  echo "       to escape from insert mode <C-t><Esc> or <C-t><C-c>"
+  echo "       to move to the previous pane <C-t><C-w>"
+  echo "       to expand/shrink terminal <C-t><C-hjkl>"
+fi
+
 ################################################################################
 # Prompt (details in ~/.config/starship.toml)
 eval "$(starship init zsh)"
