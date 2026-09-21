@@ -307,8 +307,8 @@ keymap(
   { desc = "Shrink terminal height (terminal mode)" }
 )
 
-keymap("n", "<leader>p", "<cmd>Pounce<cr>", { desc = "Pounce..." })
-keymap("n", "<leader><leader>p", "<cmd>PounceRepeat<cr>", { desc = "Pounce Again..." })
+keymap({"n", "v"}, "<leader>j", "<cmd>Pounce<cr>", { desc = "Pounce..." })
+keymap({"n", "v"}, "<leader>J", "<cmd>PounceRepeat<cr>", { desc = "Pounce Again..." })
 
 keymap("n", "<leader>oo", "<CMD>Oil<CR>", { desc = "Open oil" })
 
