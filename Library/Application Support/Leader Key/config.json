@@ -157,12 +157,6 @@
         {
           "actions" : [
             {
-              "key" : ";",
-              "label" : "Bottom",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=HalfBottom"
-            },
-            {
               "key" : "h",
               "label" : "Left",
               "type" : "url",
@@ -185,6 +179,12 @@
               "label" : "Top",
               "type" : "url",
               "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=HalfTop"
+            },
+            {
+              "key" : ";",
+              "label" : "Bottom",
+              "type" : "url",
+              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=HalfBottom"
             }
           ],
           "key" : "j",
