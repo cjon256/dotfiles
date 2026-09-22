@@ -5,22 +5,196 @@
         {
           "actions" : [
             {
+              "key" : "h",
+              "label" : "Maximize",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"WholeMax\"'"
+            },
+            {
+              "key" : "j",
+              "label" : "Centered",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"WholeCentered\"'"
+            }
+          ],
+          "key" : "h",
+          "label" : "Whole Screen",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "h",
+              "label" : "Left",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"HalfLeft\"'"
+            },
+            {
+              "key" : "j",
+              "label" : "Right",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"HalfRight\"'"
+            },
+            {
+              "key" : "k",
+              "label" : "Middle",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"HalfMiddle\"'"
+            },
+            {
+              "key" : "l",
+              "label" : "Top",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"HalfTop\"'"
+            },
+            {
+              "key" : ";",
+              "label" : "Bottom",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"HalfBottom\"'"
+            }
+          ],
+          "key" : "j",
+          "label" : "Halves",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "h",
+              "label" : "Left 1/3",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"OneThirdLeft\"'"
+            },
+            {
+              "key" : "j",
+              "label" : "Middle 1/3",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"OneThirdMiddle\"'"
+            },
+            {
+              "key" : "k",
+              "label" : "Right 1/3",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"OneThirdRight\"'"
+            },
+            {
+              "key" : "l",
+              "label" : "Left 2/3",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"TwoThirdsLeft\"'"
+            },
+            {
+              "key" : ";",
+              "label" : "Right 2/3",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"TwoThirdsRight\"'"
+            }
+          ],
+          "key" : "k",
+          "label" : "Thirds",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "j",
+              "label" : "Left Upper",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"QuarterLeftUpper\"'"
+            },
+            {
+              "key" : "k",
+              "label" : "Right Upper",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"QuarterRightUpper\"'"
+            },
+            {
+              "key" : "l",
+              "label" : "Left Lower",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"QuarterLeftLower\"'"
+            },
+            {
+              "key" : ";",
+              "label" : "Right Lower",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"QuarterRightLower\"'"
+            },
+            {
+              "key" : "u",
+              "label" : "Left Left",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"QuarterLeftLeft\"'"
+            },
+            {
+              "key" : "i",
+              "label" : "Left Middle",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"QuarterLeftMiddle\"'"
+            },
+            {
+              "key" : "o",
+              "label" : "Right Middle",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"QuarterRightMiddle\"'"
+            },
+            {
+              "key" : "p",
+              "label" : "Right Right",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"QuarterRightRight\"'"
+            }
+          ],
+          "key" : "l",
+          "label" : "Quarters",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "j",
+              "label" : "Left",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"ThreeQuartersLeft\"'"
+            },
+            {
+              "key" : "k",
+              "label" : "Right",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"ThreeQuartersRight\"'"
+            }
+          ],
+          "key" : ";",
+          "label" : "Three Quarters",
+          "type" : "group"
+        }
+      ],
+      "key" : "j",
+      "label" : "Window Management",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "actions" : [
+            {
               "key" : "j",
               "label" : "50% Split",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=LeftRight"
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"LeftRight\"'"
             },
             {
               "key" : "k",
               "label" : "Sidebar",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=Sidebar"
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"Sidebar\"'"
             },
             {
               "key" : "l",
               "label" : "Top Bottom",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=TopBottom"
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"TopBottom\"'"
             }
           ],
           "key" : "j",
@@ -30,28 +204,34 @@
         {
           "actions" : [
             {
-              "key" : "j",
+              "key" : "h",
               "label" : "Three Equal Panels",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=ThreePanel"
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"ThreePanel\"'"
+            },
+            {
+              "key" : "j",
+              "label" : "SideBar (with two bands on right side)",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"SideBiBar\"'"
             },
             {
               "key" : "k",
-              "label" : "Three Panels, Major Middle",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=ThreePanelMajor"
+              "label" : "SideBar Major (with two bands on right side)",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"SideBiBarTwoThirds\"'"
             },
             {
               "key" : "l",
               "label" : "Three Horizontal Bands",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=ThirdsBands"
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"ThirdsBands\"'"
             },
             {
               "key" : ";",
-              "label" : "SideBar (with two bands on right side)",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=SideBiBar"
+              "label" : "Three Panels, Major Middle",
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"ThreePanelMajor\"'"
             }
           ],
           "key" : "k",
@@ -63,14 +243,14 @@
             {
               "key" : "j",
               "label" : "Quarters",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=Quarters"
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"Quarters\"'"
             },
             {
               "key" : "k",
               "label" : "SideBar (with three bands on right side)",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=SideTriBar"
+              "type" : "command",
+              "value" : "osascript -e 'tell application \"Moom\" to run \"SideTriBar\"'"
             }
           ],
           "key" : "l",
@@ -90,14 +270,15 @@
           "value" : "/Applications/Mail.app"
         },
         {
+          "key" : "g",
+          "label" : "Terminal",
+          "type" : "application",
+          "value" : "/Applications/Ghostty.app"
+        },
+        {
           "key" : "i",
           "type" : "application",
           "value" : "/System/Applications/Music.app"
-        },
-        {
-          "key" : "l",
-          "type" : "url",
-          "value" : "leaderkey://settings"
         },
         {
           "key" : "m",
@@ -108,12 +289,6 @@
           "key" : "s",
           "type" : "application",
           "value" : "/Applications/Safari.app"
-        },
-        {
-          "key" : "t",
-          "label" : "Terminal",
-          "type" : "application",
-          "value" : "/Applications/Ghostty.app"
         },
         {
           "key" : "r",
@@ -132,180 +307,6 @@
       "label" : "Leader Key Settings",
       "type" : "url",
       "value" : "leaderkey://settings"
-    },
-    {
-      "actions" : [
-        {
-          "actions" : [
-            {
-              "key" : "h",
-              "label" : "Maximize",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=WholeMax"
-            },
-            {
-              "key" : "j",
-              "label" : "Centered",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=WholeCentered"
-            }
-          ],
-          "key" : "h",
-          "label" : "Whole Screen",
-          "type" : "group"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "h",
-              "label" : "Left",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=HalfLeft"
-            },
-            {
-              "key" : "j",
-              "label" : "Right",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=HalfRight"
-            },
-            {
-              "key" : "k",
-              "label" : "Middle",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=HalfMiddle"
-            },
-            {
-              "key" : "l",
-              "label" : "Top",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=HalfTop"
-            },
-            {
-              "key" : ";",
-              "label" : "Bottom",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=HalfBottom"
-            }
-          ],
-          "key" : "j",
-          "label" : "Halves",
-          "type" : "group"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "h",
-              "label" : "Left 1/3",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=OneThirdLeft"
-            },
-            {
-              "key" : "j",
-              "label" : "Middle 1/3",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=OneThirdMiddle"
-            },
-            {
-              "key" : "k",
-              "label" : "Right 1/3",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=OneThirdRight"
-            },
-            {
-              "key" : "l",
-              "label" : "Left 2/3",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=TwoThirdsLeft"
-            },
-            {
-              "key" : ";",
-              "label" : "Right 2/3",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=TwoThirdsRight"
-            }
-          ],
-          "key" : "k",
-          "label" : "Thirds",
-          "type" : "group"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "j",
-              "label" : "Left Upper",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=QuarterLeftUpper"
-            },
-            {
-              "key" : "k",
-              "label" : "Right Upper",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=QuarterRightUpper"
-            },
-            {
-              "key" : "l",
-              "label" : "Left Lower",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=QuarterLeftLower"
-            },
-            {
-              "key" : ";",
-              "label" : "Right Lower",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=QuarterRightLower"
-            },
-            {
-              "key" : "u",
-              "label" : "Left Left",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=QuarterLeftLeft"
-            },
-            {
-              "key" : "i",
-              "label" : "Left Middle",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=QuarterLeftMiddle"
-            },
-            {
-              "key" : "o",
-              "label" : "Right Middle",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=QuarterRightMiddle"
-            },
-            {
-              "key" : "p",
-              "label" : "Right Right",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=QuarterRightRight"
-            }
-          ],
-          "key" : "l",
-          "label" : "Quarters",
-          "type" : "group"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "j",
-              "label" : "Left",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=ThreeQuartersLeft"
-            },
-            {
-              "key" : "k",
-              "label" : "Right",
-              "type" : "url",
-              "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=ThreeQuartersRight"
-            }
-          ],
-          "key" : ";",
-          "label" : "Three Quarters",
-          "type" : "group"
-        }
-      ],
-      "key" : "j",
-      "label" : "Window Management",
-      "type" : "group"
     }
   ],
   "type" : "group"
