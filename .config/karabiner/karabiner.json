@@ -1,4 +1,5 @@
 {
+    "machine_specific": { "krbn-641b65c3-0c8c-4ddc-aee2-071d12425d2e": { "external_editor_path": "/Applications/VimR.app" } },
     "profiles": [
         {
             "name": "Empty",
