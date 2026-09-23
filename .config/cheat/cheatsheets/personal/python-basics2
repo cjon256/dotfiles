@@ -1,0 +1,54 @@
+# Python Quick Reference — Part 2: Exception Handling, File I/O, Imports, Environments, and Idiomatic Tricks
+
+## 1. Exception Handling
+- Syntax:
+  try:
+      result = 10 / int(user_input)
+  except ValueError:
+      print("Invalid number")
+  except ZeroDivisionError:
+      print("Cannot divide by zero")
+  else:
+      print(f"Success: {result}")  # Runs if no exception occurred
+  finally:
+      print("Cleanup step")        # Always executes
+
+- Raising errors: `raise ValueError("Invalid age")`
+- Common errors: `ValueError`, `TypeError`, `IndexError`, `KeyError`, `FileNotFoundError`
+
+## 2. File I/O
+- Context manager (`with` automatically handles closing files):
+  # Read full file
+  with open("file.txt", mode="r", encoding="utf-8") as f:
+      content = f.read()
+
+  # Read line by line
+  with open("file.txt", mode="r", encoding="utf-8") as f:
+      for line in f:
+          print(line.strip())
+
+  # Write ("w") or Append ("a")
+  with open("out.txt", mode="w", encoding="utf-8") as f:
+      f.write("Hello World\n")
+
+## 3. Imports & Modules
+- Modules: `import math` -> `math.sqrt(16)`
+- Specific imports: `from math import sqrt` -> `sqrt(16)`
+- Aliases: `import numpy as np`
+- Packages: `from package.module import function as fn`
+
+## 4. Environments & Packages
+- Create venv: `$ python -m venv .venv`
+- Activate (Linux/macOS): `$ source .venv/bin/activate`
+- Activate (Windows): `PS> .venv\Scripts\activate`
+- Deactivate: `$ deactivate`
+- Package management:
+  `python -m pip install requests`
+  `python -m pip freeze > requirements.txt`
+  `python -m pip install -r requirements.txt`
+
+## 5. Idiomatic Tricks (Pythonic Constructs)
+- Falsy values: `0`, `0.0`, `""`, `[]`, `()`, `{}`, `None`, `False`
+- Flatten list of lists: `[item for sublist in matrix for item in sublist]`
+- Remove duplicates (preserve order): `list(dict.fromkeys(my_list))`
+- Count items: `from collections import Counter; counts = Counter(my_list)`

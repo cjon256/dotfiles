@@ -1,0 +1,52 @@
+# Python Quick Reference — Part 1: Core Syntax & Flow
+
+## 1. Getting Started
+- Interactive shell: `$ python` | Exit: `>>> exit()`
+- Run script: `$ python my_script.py` | Interactive after script: `$ python -i my_script.py`
+- Comments: `# single line` (indentation uses 4 spaces per block)
+
+## 2. Dynamic Types & Conversions
+- Type checks: `type(x)`, `isinstance(x, float)`, `issubclass(int, object)`
+- Conversions: `int("42")`, `float("3.14")`, `str(42)`, `bool(1)`, `list("abc")`
+- Null value: `None`
+
+## 3. Variables & Assignments
+- Unpacking / Parallel: `x, y = 10, 20`
+- Chained: `a = b = c = 0`
+- Swap: `a, b = b, a`
+- Augmented: `counter += 1` | `permissions |= write`
+
+## 4. Numbers & Operations
+- Division: `/` (returns float), `//` (integer floor division), `%` (modulo)
+- Exponent: `2 ** 3` (8)
+- Math utilities: `abs(-5)`, `round(3.14159, 2)`, `min()`, `max()`, `sum()`
+
+## 5. Conditionals & Logic
+- Operators: `and`, `or`, `not` | `==`, `!=`, `<`, `<=`, `>`, `>=`
+- If-Elif-Else:
+  if condition:
+      pass
+  elif other_condition:
+      pass
+  else:
+      pass
+
+## 6. Loops & Control
+- Range: `for i in range(5):` (0 to 4)
+- Enumerate: `for idx, item in enumerate(items):`
+- Control: `break` (exit loop), `continue` (skip iteration)
+- While loop: `while condition:`
+
+## 7. Functions & Lambdas
+- Basic: `def greet(name, times=1): return name * times`
+- Return multiple (tuple): `return min_val, max_val` -> `a, b = get_min_max()`
+- Lambda: `square = lambda x: x ** 2`
+- Map/Filter: `map(lambda x: x**2, nums)` | `filter(lambda x: x % 2 == 0, nums)`
+
+## 8. Strings & Formatting
+- Quotes: `'...'`, `"..."`, or `"""multiline"""`
+- Slicing `[start:stop:step]`: `s[0]`, `s[-1]`, `s[1:4]`, `s[::2]`, `s[::-1]` (reverse)
+- f-Strings: `f"Hello {name}, age={age=}"`
+- Format method: `"Hello {name}".format(name="Aubrey")`
+- Raw strings (ignore escapes): `r"C:\new\text"`
+- Methods: `.upper()`, `.lower()`, `.strip()`, `.replace("a", "b")`, `.split(",")`, `",".join(list)`

@@ -1,0 +1,35 @@
+# f-string
+
+> Python f-string syntax and formatting options.
+> More information: <https://fstring.help/cheat>.
+
+- Print expression value and raw code (debugging):
+  `f"{expression=}"`
+
+- Format a float to a specific number of decimal places:
+  `f"{number:.2f}"`
+
+- Format a number with thousand separators:
+  `f"{number:,}"`
+
+- Left, right, or center align a string within a specific width:
+  `f"{string:<20}"`
+  `f"{string:>20}"`
+  `f"{string:^20}"`
+
+- Pad an integer or string with leading zeros:
+  `f"{number:04d}"`
+  `f"{string:0>10}"`
+
+- Format an integer as binary, lowercase hex, or uppercase hex:
+  `f"{number:b}"`
+  `f"{number:x}"`
+  `f"{number:X}"`
+
+- Format a number as a percentage:
+  `f"{percent:.0%}"`
+
+- Force string representation (`str()`), repr (`repr()`), or ASCII-escaped repr (`ascii()`):
+  `f"{expression!s}"`
+  `f"{expression!r}"`
+  `f"{expression!a}"`

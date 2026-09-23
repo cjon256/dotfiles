@@ -1,0 +1,54 @@
+# Python Quick Reference — Part 3: Collections, Comprehensions, OOP
+
+## 1. Primary Collections
+- Lists (mutable, ordered):
+  nums = [1, 2]
+  nums.append("x")       # Add to end
+  nums.insert(0, "y")    # Insert at index 0
+  nums.extend(["z", 5])  # Append iterable
+  nums.remove("x")       # Remove first occurrence
+  last = nums.pop()      # Remove and return last item
+
+- Tuples (immutable, ordered):
+  point = (3, 4)
+  single = (1,)          # Trailing comma required for 1-element tuple
+  x, y = point          # Unpacking
+  first, *rest = (1, 2, 3, 4)  # Extended unpacking (rest = [2, 3, 4])
+
+- Sets (unique elements, unordered):
+  a, b = {1, 2, 3}, {3, 4, 5}
+  a | b  # Union {1, 2, 3, 4, 5}
+  a & b  # Intersection {3}
+  a - b  # Difference {1, 2}
+
+- Dictionaries (key-value mapping):
+  d = {"name": "Leo", "age": 42}
+  d["sound"] = "Purr!"           # Add or update key
+  val = d.get("age", 0)          # Safe fetch with default fallback
+  d.keys() | d.values() | d.items()
+
+## 2. Comprehensions
+- List: `squares = [x**2 for x in range(10) if x % 2 == 0]`
+- Dict: `lengths = {word: len(word) for word in ["hello", "world"]}`
+- Set: `unique_lens = {len(w) for w in ["a", "bb", "a"]}`
+- Generator: `total = sum(x**2 for x in range(1000))`
+
+## 3. Object-Oriented Programming (OOP)
+- Class definition & inheritance:
+  class Animal:
+      def __init__(self, name):
+          self.name = name
+
+      def speak(self):
+          pass
+
+  class Dog(Animal):
+      species = "Canine"  # Class attribute
+
+      def speak(self):
+          return f"{self.name} barks!"
+
+      @classmethod
+      def create_puppy(cls, name):
+          return cls(f"Baby {name}")
+
