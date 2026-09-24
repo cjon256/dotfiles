@@ -312,6 +312,8 @@ keymap({"n", "v"}, "<leader>J", "<cmd>PounceRepeat<cr>", { desc = "Pounce Again.
 
 keymap("n", "<leader>oo", "<CMD>Oil<CR>", { desc = "Open oil" })
 
+keymap("i", "jk", "<Esc>", { desc = "Escape insert mode" })
+
 -- ThePrimeagen greatest hits
 -- greatest remap ever
 keymap("x", "<leader>P", [["_dP]], { desc = "Paste over selection" })
