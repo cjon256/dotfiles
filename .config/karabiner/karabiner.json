@@ -9,6 +9,58 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Temp for Anki - Cmd+Shift+t and Cmd+g macros",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "description": "Cmd+t to [Cmd+X, Tab, Tab, Cmd+V]",
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "x",
+                                        "modifiers": ["command"]
+                                    },
+                                    { "key_code": "tab" },
+                                    { "key_code": "tab" },
+                                    {
+                                        "key_code": "v",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "Cmd+g to [Shift+Tab, Shift+Tab, Cmd+n]",
+                                "from": {
+                                    "key_code": "g",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "2",
+                                        "modifiers": ["command"]
+                                    },
+                                    {
+                                        "key_code": "n",
+                                        "modifiers": ["command"]
+                                    },
+                                    {
+                                        "key_code": "tab",
+                                        "modifiers": ["shift"]
+                                    },
+                                    {
+                                        "key_code": "tab",
+                                        "modifiers": ["shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Mac OSX: double-tap left control key → Move focus next window",
                         "manipulators": [
                             {
