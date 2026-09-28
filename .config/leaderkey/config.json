@@ -265,6 +265,53 @@
     {
       "actions" : [
         {
+          "key" : "a",
+          "type" : "url",
+          "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=a"
+        },
+        {
+          "key" : "s",
+          "type" : "url",
+          "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=s"
+        },
+        {
+          "key" : "d",
+          "type" : "url",
+          "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=d"
+        },
+        {
+          "key" : "f",
+          "type" : "url",
+          "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=f"
+        },
+        {
+          "key" : "g",
+          "type" : "url",
+          "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=g"
+        },
+        {
+          "key" : "w",
+          "type" : "url",
+          "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=w"
+        },
+        {
+          "key" : "e",
+          "type" : "url",
+          "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=e"
+        },
+        {
+          "key" : "r",
+          "type" : "url",
+          "value" : "alfred://runtrigger/com.cjon256.moomuri/action/?argument=r"
+        }
+      ],
+      "key" : "m",
+      "label" : "Moom Layout",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
           "key" : "e",
           "type" : "application",
           "value" : "/Applications/Mail.app"
@@ -283,7 +330,7 @@
         {
           "key" : "m",
           "type" : "application",
-          "value" : "/Applications/Messages.app"
+          "value" : "/Applications/Moom.app"
         },
         {
           "key" : "s",
