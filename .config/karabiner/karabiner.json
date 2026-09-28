@@ -61,7 +61,7 @@
                         ]
                     },
                     {
-                        "description": "Tap Left Contol for ESC or Hold for Control",
+                        "description": "Tap Contol for ESC or Hold for Control",
                         "manipulators": [
                             {
                                 "from": {
@@ -89,6 +89,44 @@
                                     }
                                 ],
                                 "to_if_alone": [{ "key_code": "escape" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Tap Left Option for Leader Key or Hold for Option",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_option",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_option",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "shell_command": "open 'leaderkey://activate'" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Tap Right Option for F14 (Homerow) or Hold for Option",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_option",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "f14" }],
                                 "type": "basic"
                             }
                         ]
