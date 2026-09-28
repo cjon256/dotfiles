@@ -884,25 +884,6 @@
                                 "type": "basic"
                             }
                         ]
-                    },
-                    {
-                        "enabled": false,
-                        "manipulators": [
-                            {
-                                "description": "Change ⌃⌥⌘M to ⌃⌥⇧⌘M.",
-                                "from": {
-                                    "key_code": "m",
-                                    "modifiers": { "mandatory": ["command", "control", "option"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "m",
-                                        "modifiers": ["command", "control", "option", "shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
                     }
                 ]
             },
