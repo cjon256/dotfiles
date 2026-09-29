@@ -10,7 +10,7 @@ size = 16
 #
 
 [mouse]
-hide_when_typing = true
+hide_when_typing = false
 
 [font.normal]
 family = "BlexMono Nerd Font"
